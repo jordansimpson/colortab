@@ -1,7 +1,7 @@
 # Site settings
 title: COLORTAB
-description: > # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog/
+description: "COLORTAB is a collation of colors available on Github that can be used within your CSS using SASS variables to make referencing the colors easier."
+baseurl: ""
 url: "http://colortab.co.uk"
 
 # Build settings
