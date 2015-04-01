@@ -1,0 +1,348 @@
+/* 
+------------
+COMPONENTS.
+FRONTLY FORM
+------------ 
+*/
+
+.frontly-form{
+    @include remCalc(margin-bottom, $spacer);
+    float: left;
+    width: 100%;
+}
+
+.frontly-form label, 
+.frontly-form legend{
+    float: left;
+    width: 100%;
+    small{
+        @include remCalc(margin-left, $spacer--small);
+        font-weight: $weight-normal;
+        float: right;
+    }
+}
+
+.frontly-form input:not([type="submit"]),
+.frontly-form textarea, 
+.frontly-form select{
+    @include remCalc(font-size, $base-font-size);
+    @include remCalc(margin-bottom, $spacer);
+    @include remCalc(padding, $spacer);
+    @include transition(all ease .25s);
+    background: #fff;
+    float: left;
+    position: relative;
+    &:hover{
+        border-color: $base-text-clr--dull;
+    }
+    &:focus{
+        outline: none;
+        border-color: $base-text-clr;
+    }
+}
+
+.frontly-form select{
+    width: 100%;
+}
+
+.frontly-form--padded{
+    background: #f6f6f6;
+    @include remCalc(padding, $spacer--dbl);
+}
+
+.frontly-form--smooth input:not([type="submit"]),
+.frontly-form--smooth textarea,
+.frontly-form--smooth select{
+    @extend %smooth;
+}
+
+.frontly-form .grid__col{
+    padding-top:0;
+    padding-bottom:0;
+}
+
+.frontly-form__group{
+    display: block;
+    @include remCalc(padding-bottom, $spacer);
+    @include remCalc(margin-bottom, $spacer--dbl);
+}
+
+.frontly-form__group--underlined{
+    border-bottom: 1px solid $border-clr;
+}
+
+/**
+* Frontly Form - Checkboxes & Radio Buttons
+* -----------------------------------------
+*
+* The Frontly form comes with some custom checkbox & radio button styling.
+* These styles utilise the :check psuedo element and as Frontly is intended to 
+* support IE8 the styling is dependant on the use of the Selectivizr script 
+* which is included in the Frontly HTML template so make sure that this is 
+* included if you aren't using the Frontly HTML template file.
+*
+*
+* [!] Usage Example
+* -----------------
+* <div class="grid">
+* <fieldset class="frontly-form__checkbox">
+*     <legend>Example Checkbox</legend>
+*     <input type="checkbox" id="check1-1" checked="checked">
+*     <label for="check1-1">Checkboxes</label>
+* </fieldset>
+*
+*/
+
+.frontly-form__checkbox input[type="checkbox"],
+.frontly-form__radio input[type="radio"]{
+    position: absolute;
+    left: -200%;
+}
+
+/**
+* Checkboxes
+* ----------
+*/
+
+.frontly-form__checkbox input[type="checkbox"] + label{
+    @include remCalc(margin-right, $spacer);
+    @include remCalc(padding-left, $spacer--dbl);
+    width: auto;
+    position: relative;
+    &:before{
+        font-family: 'fontawesome';
+        content: '\f096';
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include transition(.25s);
+        color: $base-text-clr--dull;  
+    }
+    &:hover{
+        border-color: $base-text-clr--dull;
+        &:before{
+            color: $base-text-clr--dull;
+        }
+    }
+}
+
+.frontly-form__checkbox input[type="checkbox"]:checked + label:before{
+    content: '\f046';
+    color: $base-text-clr;
+}
+
+.frontly-form__checkbox--btn input[type="checkbox"] + label{
+    @extend %btn;
+    @extend %smooth;
+    @include remCalc(padding-left, 35px);
+    background: #fff;
+    &:before{
+        font-family: 'fontawesome';
+        content: '\f096';
+        position: absolute;
+        left: $spacer;
+        top: $spacer;
+    }
+}
+
+.frontly-form__checkbox--btn input[type="checkbox"]:checked + label{
+    border-color: $base-text-clr;
+}
+
+.frontly-form__checkbox--btn input[type="checkbox"]:checked + label:before{
+    color: $base-text-clr;
+} 
+
+
+/**
+* Radio Buttons
+* -------------
+*/
+
+.frontly-form__radio input[type="radio"] + label{
+    @include remCalc(margin-right, $spacer);
+    @include remCalc(padding-left, $spacer--dbl);
+    width: auto;
+    position: relative;
+    @include transition(.25s);
+    &:before{
+        font-family: 'fontawesome';
+        content: '\f10c';
+        @include remCalc(width, 15px);
+        @include remCalc(height, 15px);
+        position: absolute;
+        border-radius: 5px;
+        left: 0;
+        top: 0;
+        color: $base-text-clr--dull;  
+    }
+}
+
+.frontly-form__radio input[type="radio"]:checked + label:before{
+    content: '\f192';
+    color: $base-text-clr;
+}
+
+.frontly-form__radio--btn input[type="radio"] + label{
+    @extend %btn;
+    @extend %smooth;
+    @include remCalc(padding-left, 35px);
+    background: #fff;
+    &:before{
+        font-family: 'fontawesome';
+        content: '\f10c';
+        @include remCalc(width, 15px);
+        @include remCalc(height, 15px);
+        position: absolute;
+        left: $spacer;
+        top: $spacer;  
+    }
+    &:hover{
+        border-color: $base-text-clr--dull;
+    }
+}
+
+.frontly-form__radio--btn input[type="radio"]:checked + label{
+    border-color: $base-text-clr;
+}
+
+.frontly-form__radio--btn input[type="radio"]:checked + label:before{
+    color: $base-text-clr;
+}
+
+/**
+*
+* Frontly Form - Search
+*
+* [!] Usage Example
+* -----------------
+* <form>
+*     <span class="frontly-form__search">
+*         <input type="search">
+*         <button>Search</button>
+*     </span>
+* </form>
+*
+*
+*/
+
+.frontly-form.frontly-form--inline{
+    float: left;
+    .frontly-form__append,.frontly-form__prepend{
+        width: auto;
+        margin-right: $spacer--small;
+    }
+    button, .btn{
+        margin: 0;
+        float: left;
+        width: 15%;
+        border-left: 0;
+    }
+}
+
+/**
+*
+* Frontly Form - Prepending and Appending inputs
+*
+* Some input fields have a specific input type. You can specify the data that
+* you wish the user to input using the label tag but you can accompany this 
+* with an input prepend or append. Below there are a number of classes that
+* enable you to assign a prepend or append icon to the input fields to help
+* users identify what is required.
+*
+* [!] Usage Example
+* -----------------
+* <form>
+*     <label>Username</label>
+*     <span class="frontly-form__append frontly-form__append--user">
+*         <input type="text">
+*     </span>
+* </form>
+*
+*
+*/
+
+.frontly-form .frontly-form__prepend{
+    position: relative;
+    float: left;
+    width: 100%;
+    &:after{
+        font-family: "fontawesome";
+        color: #ddd;
+        position: absolute;
+        top: 12px;
+        left: 10px;
+    }
+    input{
+        @include remCalc(padding-left, 30px);
+    }
+}
+
+.frontly-form .frontly-form__append{
+    position: relative;
+    float: left;
+    width: 100%;
+    &:after{
+        font-family: "fontawesome";
+        color: #ddd;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+    }
+    input{
+        @include remCalc(padding-right, 30px);
+    }
+}
+
+.frontly-form__append--address:after,
+.frontly-form__prepend--address:after{
+    content:'\f041';
+}
+
+.frontly-form__append--dollars:after,
+.frontly-form__prepend--dollars:after{
+    content:'\f155';
+}
+
+.frontly-form__append--email:after,
+.frontly-form__prepend--email:after{
+    content:'\f0e0';
+}
+
+.frontly-form__append--euros:after,
+.frontly-form__prepend--euros:after{
+    content:'\f153';
+}
+
+.frontly-form__append--file:after,
+.frontly-form__prepend--file:after{
+    content:'\f114';
+}
+
+.frontly-form__append--password:after,
+.frontly-form__prepend--password:after{
+    content:'\f023';
+}
+
+.frontly-form__append--phone:after,
+.frontly-form__prepend--phone:after
+{
+    content:'\f095';
+}
+
+.frontly-form__append--pounds:after,
+.frontly-form__prepend--pounds:after
+{
+    content:'\f154';
+}
+
+.frontly-form__append--search:after,
+.frontly-form__prepend--search:after
+{
+    content:'\f002';
+}
+
+.frontly-form__append--user:after, 
+.frontly-form__prepend--user:after{
+    content:'\f007';
+}

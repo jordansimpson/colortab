@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<g>
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M261.982,0.69H38.016C17.401,0.69,0.69,17.402,0.69,38.016v223.968c0,20.615,16.711,37.326,37.326,37.326
+				h223.966c20.617,0,37.328-16.711,37.328-37.326V38.016C299.311,17.402,282.6,0.69,261.982,0.69z M261.982,261.984H38.016V38.016
+				h223.966V261.984z"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<circle opacity="0.7" clip-path="url(#SVGID_2_)" fill="#F2E500" cx="30.552" cy="37.271" r="86.601"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#003D37" cx="-5.656" cy="102.595" r="54.871"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#F49F12" cx="266.089" cy="10.768" r="54.87"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#E73E51" cx="310.135" cy="79.452" r="82.494"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#FABD63" cx="30.552" cy="173.891" r="43.3"/>
+		<path opacity="0.8" clip-path="url(#SVGID_2_)" fill="#D7D1C6" d="M51.456,241.078c0,23.916-19.386,43.303-43.301,43.303
+			c-23.913,0-43.299-19.387-43.299-43.303c0-23.912,19.386-43.299,43.299-43.299C32.069,197.779,51.456,217.166,51.456,241.078z"/>
+		<path opacity="0.8" clip-path="url(#SVGID_2_)" fill="#D91B5D" d="M185.408,277.66c0,26.389-21.395,47.779-47.78,47.779
+			c-26.388,0-47.78-21.391-47.78-47.779c0-26.387,21.392-47.779,47.78-47.779C164.014,229.881,185.408,251.273,185.408,277.66z"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#2FB5B5" cx="216.763" cy="284.381" r="31.354"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#62B77B" cx="192.553" cy="253.025" r="27.623"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#62B77B" cx="192.553" cy="253.025" r="27.623"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#33393F" cx="185.407" cy="294.992" r="17.331"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#91C78A" cx="41.004" cy="219.43" r="21.65"/>
+		<path opacity="0.8" clip-path="url(#SVGID_2_)" fill="#AE6DAA" d="M117.897,292.594c0,37.93-30.75,68.68-68.682,68.68
+			c-37.931,0-68.681-30.75-68.681-68.68c0-37.936,30.75-68.686,68.681-68.686C87.147,223.908,117.897,254.658,117.897,292.594z"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#5CA7DC" cx="192.554" cy="20.847" r="32.103"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#5A80BF" cx="267.208" cy="163.438" r="49.272"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#E63057" cx="266.089" cy="263.102" r="45.913"/>
+		<circle opacity="0.8" clip-path="url(#SVGID_2_)" fill="#F9D8D5" cx="292.965" cy="212.711" r="37.328"/>
+		<circle opacity="0.7" clip-path="url(#SVGID_2_)" fill="#E62869" cx="125.309" cy="0.69" r="54.871"/>
+	</g>
+	<g>
+		<path fill="#1D1D1B" d="M215.141,186.025c-7.061,25.293-30.293,39.408-59.699,39.408c-42.938,0-70.876-27.352-70.876-74.991
+			c0-47.35,34.408-75.875,75.581-75.875c31.76,0,54.994,17.939,55.287,41.465c-2.059,9.411-8.234,14.116-17.352,14.116
+			c-10.881,0-19.703-6.764-20.586-24.115l-0.883-15.586c-2.939-0.882-6.176-1.177-9.117-1.177c-21.76,0-40.288,19.703-40.288,56.759
+			c0,38.231,17.939,56.463,42.642,56.463c15.588,0,26.176-7.059,35.293-22.057L215.141,186.025z"/>
+	</g>
+</g>
+</svg>

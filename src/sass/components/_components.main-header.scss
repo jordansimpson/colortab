@@ -1,0 +1,27 @@
+/* 
+------------
+COMPONENTS.
+MAIN HEADER
+------------ 
+*/
+
+.main-header{
+	border-bottom: 1px solid $border-clr;
+	z-index: $zindex-1;
+	background: #fff;
+}
+
+.logo{
+	&--small{
+		@include remCalc(max-width, 50px);
+		@include remCalc(margin-right, $spacer);
+		margin: 0 auto;
+	}
+}
+
+.main-header .frontly-nav__text--brand-name{
+	@include respond-to(small-screen){
+		position: absolute;
+		left: -200%;
+	}
+}

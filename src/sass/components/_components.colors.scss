@@ -1,0 +1,340 @@
+/* 
+------------
+COMPONENTS.
+COLORS
+------------ 
+*/
+
+.colors{
+	@include remCalc(padding-top, 20px); 
+	@include remCalc(padding-bottom, 50px);
+}
+
+.colors__list{
+	border-top: 1px solid $border-clr;
+	float: left;
+	width: 100%;
+	@include remCalc(padding-top, 20px); 
+}
+
+.color{
+	width: 20%;
+	float: left;
+	text-align: center;
+	@include remCalc(padding-top, 30px); 
+	@include remCalc(padding-bottom, 30px); 
+	@include respond-to(medium-screen){
+		width: 25%;
+	}
+	@include respond-to(small-screen){
+		width: 50%;
+	}
+}
+
+.color__indicator{
+	display: block; 
+	margin: 0 auto;
+	border-radius: 50px;
+	@include remCalc(width, 100px); 
+	@include remCalc(height, 100px);
+}
+
+// Blues
+// -------------------
+.grue{
+	color: $grue;
+	&--background{
+		background: $grue;
+	}
+}
+.droplet{
+	color: $droplet;
+	&--background{
+		background: $droplet;
+	}
+}
+.bubblegum-blue{
+	color: $bubblegum-blue;
+	&--background{
+		background: $bubblegum-blue;
+	}
+}
+.vibrant-blue{
+	color: $vibrant-blue;
+	&--background{
+		background: $vibrant-blue;
+	}
+}
+.executive{
+	color: $executive;
+	&--background{
+		background: $executive;
+	}
+}
+.summer-sky{
+	color: $summer-sky;
+	&--background{
+		background: $summer-sky;
+	}
+}
+.baby-blue{
+	color: $baby-blue;
+	&--background{
+		background: $baby-blue;
+	}
+}
+
+// Greens
+// -------------------
+.fresh-grass{
+	color: $fresh-grass;
+	&--background{
+		background: $fresh-grass;
+	}
+}
+.teal{
+	color: $teal;
+	&--background{
+		background: $teal;
+	}
+}
+.pine{
+	color: $pine;
+	&--background{
+		background: $pine;
+	}
+}
+.greentea{
+	color: $greentea;
+	&--background{
+		background: $greentea;
+	}
+}
+.mint-chip{
+	color: $mint-chip;
+	&--background{
+		background: $mint-chip;
+	}
+}
+.slime{
+	color: $slime;
+	&--background{
+		background: $slime;
+	}
+}
+.dark-mint{
+	color: $dark-mint;
+	&--background{
+		background: $dark-mint;
+	}
+}
+.musky-green{
+	color: $musky-green;
+	&--background{
+		background: $musky-green;
+	}
+}
+.mid-mint{
+	color: $mid-mint;
+	&--background{
+		background: $mid-mint;
+	}
+}
+.dark-forrest{
+	color: $dark-forrest;
+	&--background{
+		background: $dark-forrest;
+	}
+}
+
+// Mono
+// -------------------
+.chalkboard{
+	color: $chalkboard;
+	&--background{
+		background: $chalkboard;
+	}
+}
+.musk{
+	color: $musk;
+	&--background{
+		background: $musk;
+	}
+}
+
+// Oranges
+// -------------------
+.peach{
+	color: $peach;
+	&--background{
+		background: $peach;
+	}
+}
+.ripe-orange{
+	color: $ripe-orange;
+	&--background{
+		background: $ripe-orange;
+	}
+}
+.rust{
+	color: $rust;
+	&--background{
+		background: $rust;
+	}
+}
+.faded-orange{
+	color: $faded-orange;
+	&--background{
+		background: $faded-orange;
+	}
+}
+.light-orange{
+	color: $light-orange;
+	&--background{
+		background: $light-orange;
+	}
+}
+
+// Pinks
+// -------------------
+.fusion-pink{
+	color: $fusion-pink;
+	&--background{
+		background: $fusion-pink;
+	}
+}
+.pink-pearl{
+	color: $pink-pearl;
+	&--background{
+		background: $pink-pearl;
+	}
+}
+.petal-pink{
+	color: $petal-pink;
+	&--background{
+		background: $petal-pink;
+	}
+}
+.cherry-dust{
+	color: $cherry-dust;
+	&--background{
+		background: $cherry-dust;
+	}
+}
+.shock-pink{
+	color: $shock-pink;
+	&--background{
+		background: $shock-pink;
+	}
+}
+
+// Purples
+// -------------------
+.dusty-purple{
+	color: $dusty-purple;
+	&--background{
+		background: $dusty-purple;
+	}
+}
+.smooth-purple{
+	color: $smooth-purple;
+	&--background{
+		background: $smooth-purple;
+	}
+}
+.gurple{
+	color: $gurple;
+	&--background{
+		background: $gurple;
+	}
+}
+.sweet-purple{
+	color: $sweet-purple;
+	&--background{
+		background: $sweet-purple;
+	}
+}
+.royal-purple{
+	color: $royal-purple;
+	&--background{
+		background: $royal-purple;
+	}
+}
+.maroon{
+	color: $maroon;
+	&--background{
+		background: $maroon;
+	}
+}
+
+// Reds
+// -------------------
+.blood{
+	color: $blood;
+	&--background{
+		background: $blood;
+	}
+}
+.danger{
+	color: $danger;
+	&--background{
+		background: $danger;
+	}
+}
+.vibrant-red{
+	color: $vibrant-red;
+	&--background{
+		background: $vibrant-red;
+	}
+}
+.flat-red{
+	color: $flat-red;
+	&--background{
+		background: $flat-red;
+	}
+}
+
+// Yellows
+// -------------------
+.custard{
+	color: $custard;
+	&--background{
+		background: $custard;
+	}
+}
+.dark-gold{
+	color: $dark-gold;
+	&--background{
+		background: $dark-gold;
+	}
+}
+.creamy-yellow{
+	color: $creamy-yellow;
+	&--background{
+		background: $creamy-yellow;
+	}
+}
+.double-yellow{
+	color: $double-yellow;
+	&--background{
+		background: $double-yellow;
+	}
+}
+.gold{
+	color: $gold;
+	&--background{
+		background: $gold;
+	}
+}
+.sand{
+	color: $sand;
+	&--background{
+		background: $sand;
+	}
+}
+.shock-yellow{
+	color: $shock-yellow;
+	&--background{
+		background: $shock-yellow;
+	}
+}

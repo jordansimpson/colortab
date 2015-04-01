@@ -1,0 +1,180 @@
+/* 
+------------
+VETOS.
+HELPERS
+
+a.k.a
+THE 
+GUILTY FILE
+------------ 
+*/
+
+
+/**
+*
+* This is the guilty file that keeps all the little helper classes contained.
+* These classes enable you to override any pre-existing styling where required.
+*
+* They shouldn't be used where the styling can be added to an element within a 
+* css file but we all know that we don't live in an ideal world and quick 
+* protoyping can be important, so adding a little classes temporarily can be 
+* useful.
+*
+*/ 
+
+
+/**
+*
+* Floats
+* ----------
+* Floating elements should be set within your CSS but this can't always be 
+* possible. The classes below enable you to set the float of an element.
+* 
+*/
+
+.float--left{
+	float: left !important;
+}
+
+.float--right{
+	float: right !important;
+}
+
+.float--none{
+	float: none !important;
+}
+
+/**
+*
+* Margins & Padding
+* -----------------
+* Floating elements should be set within your CSS but this can't always be 
+* possible. The classes below enable you to set the float of an element.
+* 
+*/
+
+/**
+* Directions Sass List
+*/
+
+$directions:('top','right','bottom','left');
+
+
+/**
+* Margins
+*/
+@each $direction in $directions {
+    .push--#{$direction}{
+        @include remCalc(margin-#{$direction}, 10px);
+    }
+}
+
+/**
+* Padding
+*/
+@each $direction in $directions {
+    .pad--#{$direction}{
+        @include remCalc(padding-#{$direction}, 10px);
+    }
+}
+
+/**
+*
+* Font Weights
+* ------------
+* The font weight over classes below can sometimes become quite useful, as 
+* shown in the example below:
+*
+* [!] Usage Example
+* -----------------
+* <h1>Font Weight <span class="font-weight--normal">override</span></h1>
+* 
+*/
+
+.font-weight--light{
+	font-weight: $weight-light !important;
+}
+
+.font-weight--normal{
+	font-weight: $weight-normal !important;
+}
+
+.font-weight--heavy{
+	font-weight: $weight-heavy !important;
+}
+
+
+/**
+*
+* Text Alignment
+* --------------
+* The alignment of text set by a parent class/style sometimes needs to be
+* overridden. You can achieve that by using once of the classes below:
+*
+* [!] Usage Example
+* -----------------
+* <p class="align--right">Text aligned right</p>
+* <p class="align--center">Text aligned center</p>
+* <p class="align--left">Text aligned left</p>
+* 
+*/
+
+.align--left{
+	text-align: left !important;
+}
+
+.align--center{
+	text-align: center !important;
+}
+
+.align--right{
+	text-align: right !important;
+}
+
+
+/**
+*
+* Hidding Elements
+* ----------------
+* Hiding elements can be useful when working with a repsonsive design. It 
+* enables you to add and remove elements depending on the viewport easily.
+* The classes below enable you to do just that, as shown in the example below:
+*
+* [!] Usage Example
+* -----------------
+* <div class="hidden display--tablet">
+*     <p>Hey, you can only see me on a tablet device!</p>
+* </div>
+* 
+*/
+
+.hidden{
+	display: none !important;
+}
+
+/**
+* Hide or display elements on tablet devices
+*/
+
+@include respond-to(medium-screen){
+	.display--medium{
+		display: block !important;
+	}
+	.hidden--medium{
+		display: none !important;
+	}
+}
+
+/**
+* Hide or display elements on mobile devices
+*/
+
+@include respond-to(small-screen){
+	.display--small{
+		display: block !important;
+	}
+	.hidden--small{
+		display: none !important;
+	}
+}
+

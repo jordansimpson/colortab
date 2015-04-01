@@ -1,0 +1,28 @@
+/* 
+------------
+COMPONENTS.
+TABLES
+------------ 
+*/
+
+.striped-table{
+	tbody tr:nth-child(odd){
+		background: #f6f6f6;
+	}
+}
+
+.striped-table--branded{
+	tbody tr:nth-child(odd){
+		background: lighten($brand-clr, 30%);
+	}
+}
+
+.table-wrap{
+	float: left;
+	width: 100%;
+	overflow-x: scroll;
+	@include remCalc(margin-bottom, $spacer);
+	table{
+		margin-bottom: 0;
+	}
+}

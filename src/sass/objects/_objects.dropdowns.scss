@@ -1,0 +1,35 @@
+/* 
+------------
+OBJECTS.
+DROPDOWNS
+------------ 
+*/
+
+.dropdown{
+	position: relative;
+	a{
+		text-decoration: none;
+	}
+	ul{
+		display: none;
+		position: absolute;
+		background: #fff;
+		left: 0;
+		z-index: $zindex-1;
+	}
+	li{
+		width: 100%;
+		float: left;
+		position: relative;
+		&:hover > ul{
+			display: block;
+			position: absolute;
+			left: 100%;
+			top: 0;
+		}
+	}
+	&:hover > ul{
+		display: block;
+		position: absolute;
+	}
+}

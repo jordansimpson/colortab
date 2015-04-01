@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<section class="introduction animated fadeIn">
+    <div class="grid">
+        <div class="grid__row grid__row--central hidden--small">
+            <div class="grid__col grid__col--2-12">
+                <img src="/dist/img/colortab-logo.svg" onerror="/dist/img/colortab-logo.png" alt="" class="logo animated bounceInDown">
+            </div>
+        </div>
+        <div class="grid__row grid__row--central">
+            <div class="grid__col grid__col--8-12">
+                <p><strong>COLORTAB</strong> is a collation of colors available on Github that can be used within your CSS using SASS variables to make referencing the colors easier.</p>
+                <div class="btn--centered">
+                    <span class="btn-group btn-group--smooth hidden--small">
+                        <a href="colortab.scss" class="btn">Download</a>
+                        <a href="https://github.com/jordansimpson/colortab" class="btn btn--success">View on GitHub</a>
+                    </span>
+                    <a href="https://github.com/jordansimpson/colortab" class="btn btn--large btn--success btn--smooth hidden display--small">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="colors">
+    <div class="grid">
+        <div class="grid__row">
+            <div class="grid__col grid__col--12-12">
+                <ul class="colors__list list--unstyled">
+                    {% for color in site.data.colors %}
+                    <li class="color">
+                        <h5>${{color.name}}</h5>
+                        <span class="color__indicator {{color.name}}--background animated bounceIn"></span>
+                        <span style="float: left; clear: left; margin: 20px 0; width: 100%;">#{{color.hex}}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+/* 
+------------
+COMPONENTS.
+MAIN FOOTER
+------------ 
+*/
+
+.main-footer{
+	border-top: 1px solid $border-clr;
+	z-index: $zindex-1;
+	text-align: center;
+	@include remCalc(padding-top, $spacer--large);
+}
+
+	.main-footer__tagline{
+		background: $base-text-clr;
+		color: #fff;
+		p{
+			margin-bottom: none;	
+		}
+	}

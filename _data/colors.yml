@@ -1,0 +1,184 @@
+
+- name: grue
+  hex: 5D6F7C
+  category: blue
+
+- name: droplet
+  hex: 75B4DF
+  category: blue
+
+- name: bubblegum-blue
+  hex: 31C3D9
+  category: blue
+
+- name: vibrant-blue
+  hex: 1FA0F4
+  category: blue
+
+- name: executive 
+  hex: 1A6AAF
+  category: blue
+
+- name: summer-sky
+  hex: 4FADF4
+  category: blue
+
+- name: baby-blue
+  hex: 91DAFF
+  category: blue
+
+- name: fresh-grass
+  hex: 5DBE7C
+  category: green
+
+- name: teal
+  hex: 65D2C3
+  category: green
+
+- name: pine
+  hex: 467868
+  category: green
+
+- name: greentea
+  hex: 036F73
+  category: green
+
+- name: mint-chip
+  hex: 86E894;
+  category: green
+
+- name: slime
+  hex: 90C944
+  category: green
+
+- name: dark-mint
+  hex: 3294A4
+  category: green
+
+- name: musky-green
+  hex: D7D596
+  category: green
+
+- name: mid-mint
+  hex: 4ACFAF
+  category: green
+
+- name: dark-forrest
+  hex: 003D37
+  category: green
+
+- name: chalkboard
+  hex: 36363d
+  category: mono
+
+- name: musk 
+  hex: D7D1C7
+  category: mono
+
+- name: peach
+  hex: F68D5D
+  category: orange
+
+- name: ripe-orange
+  hex: F49F11
+  category: orange
+
+- name: rust
+  hex: D25F43
+  category: orange
+
+- name: faded-orange
+  hex: F5B08A
+  category: orange
+
+- name: light-orange
+  hex: FDBF62
+  category: orange
+
+- name: fusion-pink
+  hex: D91B5C
+  category: pink
+
+- name: pink-pearl
+  hex: FF5D7C
+  category: pink
+
+- name: petal-pink
+  hex: FF6A77
+  category: pink
+
+- name: cherry-dust
+  hex: AD3A48
+  category: pink
+
+- name: shock-pink
+  hex: FF1567
+  category: pink
+
+- name: dusty-purple
+  hex: 827583
+  category: purple
+
+- name: smooth-purple
+  hex: 7765D9
+  category: purple
+
+- name: gurple
+  hex: C1BCC6
+  category: purple
+
+- name: sweet-purple
+  hex: C46AC7
+  category: purple
+
+- name: royal-purple
+  hex: 54152B
+  category: purple
+
+- name: maroon
+  hex: 6A1226
+  category: purple
+
+- name: blood
+  hex: 70292B
+  category: red
+
+- name: danger
+  hex: B00C2B
+  category: red
+
+- name: vibrant-red
+  hex: FF3C2E
+  category: red
+
+- name: flat-red
+  hex: EF3E50
+  category: red
+
+- name: custard
+  hex: FFC87C
+  category: yellow
+
+- name: dark-gold
+  hex: 947D4E
+  category: yellow
+
+- name: creamy-yellow
+  hex: FEF2D8
+  category: yellow
+
+- name: double-yellow
+  hex: FEEF41
+  category: yellow
+
+- name: gold
+  hex: EBD35B
+  category: yellow
+
+- name: sand
+  hex: F6C79E
+  category: yellow
+
+- name: shock-yellow
+  hex: FEFF1A
+  category: yellow

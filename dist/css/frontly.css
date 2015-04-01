@@ -1,0 +1,5208 @@
+/*
+*
+* The Frontly Framework is a Sass based, OOCSS, front-end framework that 
+* utilises the using Gulp.js task runner that provides all projects with a 
+* great starting platform.
+*
+* It is also based around the ITCSS(Inverted Triangle CSS) methodology 
+* that has been coined by Harry Roberts (@csswizardy) which you will be able 
+* to find out more soon I'm sure at http://itcss.io/ or by watch one of 
+* Harry's talks - https://www.youtube.com/watch?v=1OKZOV-iLj4
+*
+*/
+/* 
+------------
+SETTINGS.
+------------
+The settings files are built up of numerous global variables to be used within a range of different situations. From setting the border colors of inputs by using the or altering the $border-clr variable or by adding a padding by using one of the $spacer variables. Feel free to amend the variables values as you see fit or add you own.
+------------ 
+*/
+/* 
+------------
+SETTINGS.
+BREAKPOINTS
+------------ 
+*/
+/* 
+------------
+SETTINGS.
+COLORS
+------------ 
+*/
+/* 
+------------
+SETTINGS.
+SPACERS
+------------ 
+*/
+/* 
+------------
+SETTINGS.
+TYPOGRAPHY
+------------ 
+*/
+/* 
+------------
+SETTINGS.
+Z-INDEX
+------------ 
+*/
+/* 
+------------
+TOOLS.
+------------ 
+The tools files consist of a number of useful functions and mixins that are used throughout the framework and can be utilised to build new components.
+------------ 
+*/
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2015 Daniel Eden
+*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
+
+.animated.bounceIn, .animated.bounceOut {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s; }
+
+.animated.flipOutX, .animated.flipOutY {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s; }
+
+@-webkit-keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0); }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); } }
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0); }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); } }
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom; }
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1; }
+
+  25%, 75% {
+    opacity: 0; } }
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1; }
+
+  25%, 75% {
+    opacity: 0; } }
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse; }
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1); }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1); }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1); }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1); }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1); }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1); }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1); }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1); }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand; }
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0); } }
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0); } }
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake; }
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg); }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg); }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg); }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg); }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg); } }
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg); }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg); }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg); }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg); }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg); } }
+
+.swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing; }
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg); }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg); }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: none;
+    transform: none; }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes wobble {
+  0% {
+    -webkit-transform: none;
+    transform: none; }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble; }
+
+@-webkit-keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn; }
+
+@-webkit-keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown; }
+
+@-webkit-keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0); }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0); }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft; }
+
+@-webkit-keyframes bounceInRight {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0); }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0); }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes bounceInRight {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0); }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0); }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0); }
+
+  100% {
+    -webkit-transform: none;
+    transform: none; } }
+
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight; }
+
+@-webkit-keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0); }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0); }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp; }
+
+@-webkit-keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9); }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); } }
+
+@keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9); }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); } }
+
+.bounceOut {
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut; }
+
+@-webkit-keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); } }
+
+@keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0); }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); } }
+
+.bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  animation-name: bounceOutDown; }
+
+@-webkit-keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); } }
+
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); } }
+
+.bounceOutLeft {
+  -webkit-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft; }
+
+@-webkit-keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); } }
+
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); } }
+
+.bounceOutRight {
+  -webkit-animation-name: bounceOutRight;
+  animation-name: bounceOutRight; }
+
+@-webkit-keyframes bounceOutUp {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); } }
+
+@keyframes bounceOutUp {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+
+  40%, 45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); } }
+
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig; }
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft; }
+
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig; }
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
+
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); } }
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); } }
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown; }
+
+@-webkit-keyframes fadeOutDownBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); } }
+
+@keyframes fadeOutDownBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0); } }
+
+.fadeOutDownBig {
+  -webkit-animation-name: fadeOutDownBig;
+  animation-name: fadeOutDownBig; }
+
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft; }
+
+@-webkit-keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); } }
+
+@keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); } }
+
+.fadeOutLeftBig {
+  -webkit-animation-name: fadeOutLeftBig;
+  animation-name: fadeOutLeftBig; }
+
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight; }
+
+@-webkit-keyframes fadeOutRightBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); } }
+
+@keyframes fadeOutRightBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); } }
+
+.fadeOutRightBig {
+  -webkit-animation-name: fadeOutRightBig;
+  animation-name: fadeOutRightBig; }
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); } }
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); } }
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp; }
+
+@-webkit-keyframes fadeOutUpBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); } }
+
+@keyframes fadeOutUpBig {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); } }
+
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig; }
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; } }
+
+@keyframes flip {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; } }
+
+.animated.flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip; }
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0; }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0; }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX; }
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0; }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0; }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY; }
+
+@-webkit-keyframes flipOutX {
+  0% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0; } }
+
+@keyframes flipOutX {
+  0% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0; } }
+
+.flipOutX {
+  -webkit-animation-name: flipOutX;
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important; }
+
+@-webkit-keyframes flipOutY {
+  0% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0; } }
+
+@keyframes flipOutY {
+  0% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); }
+
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0; } }
+
+.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  animation-name: flipOutY; }
+
+@-webkit-keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+
+@-webkit-keyframes lightSpeedOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0; } }
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0; } }
+
+.lightSpeedOut {
+  -webkit-animation-name: lightSpeedOut;
+  animation-name: lightSpeedOut;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
+
+@-webkit-keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn; }
+
+@-webkit-keyframes rotateInDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes rotateInDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft; }
+
+@-webkit-keyframes rotateInDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes rotateInDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.rotateInDownRight {
+  -webkit-animation-name: rotateInDownRight;
+  animation-name: rotateInDownRight; }
+
+@-webkit-keyframes rotateInUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes rotateInUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.rotateInUpLeft {
+  -webkit-animation-name: rotateInUpLeft;
+  animation-name: rotateInUpLeft; }
+
+@-webkit-keyframes rotateInUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+@keyframes rotateInUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1; } }
+
+.rotateInUpRight {
+  -webkit-animation-name: rotateInUpRight;
+  animation-name: rotateInUpRight; }
+
+@-webkit-keyframes rotateOut {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0; } }
+
+@keyframes rotateOut {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0; } }
+
+.rotateOut {
+  -webkit-animation-name: rotateOut;
+  animation-name: rotateOut; }
+
+@-webkit-keyframes rotateOutDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; } }
+
+@keyframes rotateOutDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; } }
+
+.rotateOutDownLeft {
+  -webkit-animation-name: rotateOutDownLeft;
+  animation-name: rotateOutDownLeft; }
+
+@-webkit-keyframes rotateOutDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+@keyframes rotateOutDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+.rotateOutDownRight {
+  -webkit-animation-name: rotateOutDownRight;
+  animation-name: rotateOutDownRight; }
+
+@-webkit-keyframes rotateOutUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+@keyframes rotateOutUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+.rotateOutUpLeft {
+  -webkit-animation-name: rotateOutUpLeft;
+  animation-name: rotateOutUpLeft; }
+
+@-webkit-keyframes rotateOutUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0; } }
+
+@keyframes rotateOutUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0; } }
+
+.rotateOutUpRight {
+  -webkit-animation-name: rotateOutUpRight;
+  animation-name: rotateOutUpRight; }
+
+@-webkit-keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+
+  20%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+
+  40%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0; } }
+
+@keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+
+  20%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+
+  40%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0; } }
+
+.hinge {
+  -webkit-animation-name: hinge;
+  animation-name: hinge; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.rollIn {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes rollOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg); } }
+
+@keyframes rollOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg); } }
+
+.rollOut {
+  -webkit-animation-name: rollOut;
+  animation-name: rollOut; }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); }
+
+  50% {
+    opacity: 1; } }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); }
+
+  50% {
+    opacity: 1; } }
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn; }
+
+@-webkit-keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+@keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.zoomInDown {
+  -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown; }
+
+@-webkit-keyframes zoomInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+@keyframes zoomInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.zoomInLeft {
+  -webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft; }
+
+@-webkit-keyframes zoomInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+@keyframes zoomInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.zoomInRight {
+  -webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight; }
+
+@-webkit-keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+@keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.zoomInUp {
+  -webkit-animation-name: zoomInUp;
+  animation-name: zoomInUp; }
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3); }
+
+  100% {
+    opacity: 0; } }
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut; }
+
+@-webkit-keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+@keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.zoomOutDown {
+  -webkit-animation-name: zoomOutDown;
+  animation-name: zoomOutDown; }
+
+@-webkit-keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(-2000px, 0, 0);
+    transform: scale(.1) translate3d(-2000px, 0, 0);
+    -webkit-transform-origin: left center;
+    transform-origin: left center; } }
+
+@keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(-2000px, 0, 0);
+    transform: scale(.1) translate3d(-2000px, 0, 0);
+    -webkit-transform-origin: left center;
+    transform-origin: left center; } }
+
+.zoomOutLeft {
+  -webkit-animation-name: zoomOutLeft;
+  animation-name: zoomOutLeft; }
+
+@-webkit-keyframes zoomOutRight {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(2000px, 0, 0);
+    transform: scale(.1) translate3d(2000px, 0, 0);
+    -webkit-transform-origin: right center;
+    transform-origin: right center; } }
+
+@keyframes zoomOutRight {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.1) translate3d(2000px, 0, 0);
+    transform: scale(.1) translate3d(2000px, 0, 0);
+    -webkit-transform-origin: right center;
+    transform-origin: right center; } }
+
+.zoomOutRight {
+  -webkit-animation-name: zoomOutRight;
+  animation-name: zoomOutRight; }
+
+@-webkit-keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+@keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+.zoomOutUp {
+  -webkit-animation-name: zoomOutUp;
+  animation-name: zoomOutUp; }
+
+@-webkit-keyframes slideInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown; }
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft; }
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight; }
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp; }
+
+@-webkit-keyframes slideOutDown {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); } }
+
+@keyframes slideOutDown {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); } }
+
+.slideOutDown {
+  -webkit-animation-name: slideOutDown;
+  animation-name: slideOutDown; }
+
+@-webkit-keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+@keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+.slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft; }
+
+@-webkit-keyframes slideOutRight {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes slideOutRight {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
+
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight; }
+
+@-webkit-keyframes slideOutUp {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); } }
+
+@keyframes slideOutUp {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); } }
+
+.slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp; }
+
+/* 
+------------
+TOOLS.
+FUNCTIONS
+------------ 
+*/
+/*
+Set contrast color function.
+----------------------------
+* Setting a contrasting color can be a pain sometimes if you don't know what color you're going to use. This function helps deal with the use of color variables and check the contrast of the colors.
+*/
+/* 
+------------
+TOOLS.
+GRID
+------------ 
+*/
+/**
+*
+* Grids are great for structuring a websites layout so the mixins below enable 
+* you to utilise a grid system symantically or, if you wish to, you can use 
+* the grid system that has been put together in the _objects.grid.scss file.
+* 
+* Frontly by default utlises a 8 column grid but this can be amended by 
+* changing the $grid-column-count variable in the _settings.grid.scss file.
+*
+*
+*/
+.badge, .btn, .frontly-form__checkbox--btn input[type="checkbox"] + label, .frontly-form__radio--btn input[type="radio"] + label {
+  padding: 10px;
+  padding: 0.625rem;
+  margin-right: 10px;
+  margin-right: 0.625rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  border: 1px solid #e5e5e5;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background: #f6f6f6;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: .05rem;
+  text-decoration: none;
+  display: inline-block; }
+
+.grid-box, .btn--smooth, .frontly-form--smooth input:not([type="submit"]), .frontly-form--smooth textarea, .frontly-form--smooth select, .frontly-form__checkbox--btn input[type="checkbox"] + label, .frontly-form__radio--btn input[type="radio"] + label, .tooltip {
+  border-radius: 5px; }
+
+/* 
+------------
+GENERIC.
+------------ 
+The generic files are what they say on the tin. They are the basic starting generic stylings that set the basis of the framework, starting with the css reset to remove browser specific styling.
+------------ 
+*/
+/* 
+------------
+GENERIC.
+RESET
+------------ 
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* 
+change border colour to suit your needs 
+*/
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 16px 0;
+  margin: 1rem 0;
+  padding: 0; }
+
+/* 
+------------
+GENERIC.
+BOX-SIZING
+------------ 
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* 
+------------
+GENERIC.
+PAGE
+------------ 
+*/
+html, body {
+  background: #fff;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Roboto', Arial, sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+/* 
+------------
+BASE.
+------------ 
+The base files consist of the general styling that has been set after the generic files have done their job. This helps to set things back in a more structured and globally consistant manor.
+------------ 
+*/
+/* 
+------------
+BASE.
+FORMS
+------------ 
+*/
+label, legend {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem; }
+
+input:not([type=button]):not([type=reset]):not([type=submit]), select, textarea {
+  vertical-align: middle;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  font-size: 16px;
+  font-size: 1rem; }
+
+input[type=email], input[type=file], input[type=password], input[type=search], input[type=tel], input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  color: #222;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  padding: 0.3125rem; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  vertical-align: middle;
+  cursor: pointer;
+  float: left;
+  letter-spacing: 0;
+  font-size: 16px;
+  font-size: 1rem; }
+
+select, option {
+  cursor: pointer;
+  padding: 5px;
+  padding: 0.3125rem; }
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: top;
+  padding: 10px;
+  padding: 0.625rem; }
+
+/* 
+------------
+BASE.
+IMAGES
+------------ 
+*/
+/*
+Adding padding to ul and ol elements
+*/
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+
+img[width], img[height] {
+  max-width: 0; }
+
+figure {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+
+figure img {
+  margin-bottom: 0;
+  width: 100%; }
+
+figcaption {
+  border-bottom: 1px dotted #e5e5e5;
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  padding-top: 0.625rem;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem; }
+
+/* 
+------------
+BASE.
+LISTS
+------------ 
+*/
+ul, ol {
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+
+dl {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+
+dt {
+  font-weight: 700; }
+
+/* 
+------------
+BASE.
+TABLES
+------------ 
+*/
+table, tbody {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px; }
+
+caption {
+  text-align: left; }
+
+/* 
+------------
+BASE.
+TYPOGRAPHY
+------------ 
+*/
+h1, h2, h3, h4, h5 {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+
+h1 {
+  font-size: 48px;
+  font-size: 3rem; }
+
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem; }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+.sub-header {
+  color: #a2a2a2; }
+
+p {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  line-height: 1.6; }
+
+small, .small-print {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  color: #555555;
+  text-decoration: underline; }
+  a:hover {
+    color: #3c3c3c; }
+
+sup, sub {
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  bottom: -3px;
+  bottom: -0.1875rem; }
+
+sub {
+  top: -5px;
+  top: -0.3125rem; }
+
+del {
+  text-decoration: line-through;
+  color: #a2a2a2; }
+
+u, ins {
+  text-decoration: underline; }
+
+blockquote {
+  display: block;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+  border-left: 1px solid #e5e5e5; }
+  blockquote small {
+    font-style: normal;
+    display: block;
+    font-size: 12px;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    margin-top: 0.625rem;
+    color: #bbb; }
+
+q {
+  quotes: "'" "'"; }
+
+q:before {
+  content: open-quotes; }
+
+q:after {
+  content: close-quote; }
+
+cite {
+  font-weight: 700;
+  font-style: italic; }
+
+abbr {
+  text-transform: uppercase; }
+
+mark {
+  background: #fff9B7; }
+
+pre {
+  background: #f6f6f6;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  float: left;
+  display: block;
+  padding: 10px;
+  overflow: scroll; }
+
+/* 
+------------
+OBJECTS.
+------------ 
+The object files consist of styling for non specific UI blocks e.g. lists. These help to enable you to create customised components with useful present structure.
+------------ 
+*/
+/* 
+------------
+OBJECTS.
+DROPDOWNS
+------------ 
+*/
+.dropdown, .frontly-dropdown {
+  position: relative; }
+  .dropdown a, .frontly-dropdown a {
+    text-decoration: none; }
+  .dropdown ul, .frontly-dropdown ul {
+    display: none;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    z-index: 1; }
+  .dropdown li, .frontly-dropdown li {
+    width: 100%;
+    float: left;
+    position: relative; }
+    .dropdown li:hover > ul, .frontly-dropdown li:hover > ul {
+      display: block;
+      position: absolute;
+      left: 100%;
+      top: 0; }
+  .dropdown:hover > ul, .frontly-dropdown:hover > ul {
+    display: block;
+    position: absolute; }
+
+/* 
+------------
+OBJECT.
+GRID
+------------ 
+*/
+/**
+*
+* The Frontly grid is a great basis for any project. The layout of a design is 
+* important and there isn't any better way than a grid.
+* 
+* So how does it work?
+* --------------------
+* Well if you'd like to find see examples of the grid then visit 
+* http://frontly.co.uk/grid and you will be able to see it in illustrated in 
+* action.
+* 
+* [!] Usage Example
+* -----------------
+* <div class="grid">
+*     <div class="grid__row">
+*         <div class="grid__col grid__col--12-12">
+*             <h1>Frontly grid</h1>
+*         </div>
+*     </div>
+* </div>
+*
+*/
+/**
+*
+* .grid (a.k.a container, wrapper etc...)
+* ---------------------------------------
+* To get you started you will need to wrap your grid elements in a div or 
+* section with the class of .grid as this will be your wrapper, container,
+* whatever you may call it. The naming choice has been made to make it easier 
+* to assciate it with what it is you're trying to acheive. The maximum width 
+* of the .grid element is set as the $break-extra-large in the 
+* _settings.breakpoints.scss field which will set the max-width value of your 
+* website.
+*
+*/
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 10px 0; }
+  .grid:before, .grid:after {
+    line-height: 0;
+    display: table;
+    content: ''; }
+  .grid:after {
+    clear: both; }
+
+/**
+*
+* .grid__row
+* ----------
+* The .grid__row element is required to wrap the .grid__col elements.
+*
+*/
+.grid__row {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 0 10px;
+  *zoom: 1; }
+  .grid__row .grid__col .grid__row {
+    padding: 0; }
+    .grid__row .grid__col .grid__row .grid__col:first-child {
+      padding-left: 0; }
+    .grid__row .grid__col .grid__row .grid__col:last-child {
+      padding-right: 0; }
+
+/**
+*
+* .grid__row--central - Centering .grid_col within the .grid__row element
+* -----------------------------------------------------------------------
+* Some projects require you to have centered elements and a grid shouldn't 
+* limit you when it comes to this requirement. The .grid__row--central class 
+* enables you to center the .grid__col elements within th .grid__row element.
+* If you'd rather not us this technique then feel free to play with the 
+* .grid__push--#-# classes that are outlined just below in the .grid__col 
+* section in this stylesheet.
+* 
+* [!] Usage Example
+* -----------------
+* <div class="grid">
+*     <div class="grid__row grid__row--central">
+*         <div class="grid__col grid__col--6-12">
+*             <h1>Hey I'm centered</h1>
+*         </div>
+*     </div>
+* </div>
+*
+*/
+.grid__row--central {
+  text-align: center; }
+  .grid__row--central .grid__col {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    text-align: left; }
+    .grid__row--central .grid__col:before {
+      display: table;
+      clear: both;
+      content: ''; }
+
+/**
+*
+* .grid__row--tiled-{#}-col - tiled column layout
+* -----------------------------------------------------------------------
+*
+* It is common for a project to have a tiled layout required in which you have 
+* multple .grid__col within a row that exceed the 1 row. To cater for this you 
+* can utilise the .grid__row--tiled-{#}-col class (the {#} is where your count 
+* goes, with options of either 2, 3 or 4). It is a very simple and useful
+* class to add, as shown in the below.
+* 
+* [!] Usage Example
+* -----------------
+* <div class="grid">
+*     <div class="grid__row grid__row--tiled-3-col">
+*         <div class="grid__col grid__col--4-12">
+*             <h1>Hey I'm tiled</h1>
+*         </div>
+*         <div class="grid__col grid__col--4-12">
+*             <h1>Hey I'm tiled</h1>
+*         </div>
+*         <div class="grid__col grid__col--4-12">
+*             <h1>Hey I'm tiled</h1>
+*         </div>
+*         <div class="grid__col grid__col--4-12">
+*             <h1>Hey I'm tiled</h1>
+*         </div>
+*         <div class="grid__col grid__col--4-12">
+*             <h1>Hey I'm tiled</h1>
+*         </div>
+*         <div class="grid__col grid__col--4-12">
+*             <h1>Hey I'm tiled</h1>
+*         </div>
+*     </div>
+* </div>
+*
+*/
+.grid__row--tiled-2-col .grid__col:nth-child(2n) {
+  padding-right: 0; }
+
+.grid__row--tiled-2-col .grid__col:nth-child(2n+1) {
+  clear: left;
+  padding-left: 0; }
+  .grid__row--tiled-2-col .grid__col:nth-child(2n+1):before {
+    content: '';
+    width: 100%;
+    clear: left; }
+
+.grid__row--tiled-2-col .grid__col:last-child:nth-child(odd) {
+  padding-right: 10px !important; }
+  @media only screen and (max-width: 749px) {
+    .grid__row--tiled-2-col .grid__col:last-child:nth-child(odd) {
+      padding-right: 0 !important; } }
+
+.grid__row--tiled-3-col .grid__col:nth-child(3n) {
+  padding-right: 0; }
+
+.grid__row--tiled-3-col .grid__col:nth-child(3n+1) {
+  clear: left;
+  padding-left: 0; }
+  .grid__row--tiled-3-col .grid__col:nth-child(3n+1):before {
+    content: '';
+    width: 100%;
+    clear: left; }
+
+.grid__row--tiled-3-col .grid__col:last-child:nth-child(odd):not(.grid_col:nth-child(3n)) {
+  padding-right: 10px !important; }
+  @media only screen and (max-width: 749px) {
+    .grid__row--tiled-3-col .grid__col:last-child:nth-child(odd):not(.grid_col:nth-child(3n)) {
+      padding-right: 0 !important; } }
+
+.grid__row--tiled-4-col .grid__col:nth-child(4n) {
+  padding-right: 0; }
+
+.grid__row--tiled-4-col .grid__col:nth-child(4n+1) {
+  clear: left;
+  padding-left: 0; }
+  .grid__row--tiled-4-col .grid__col:nth-child(4n+1):before {
+    content: '';
+    width: 100%;
+    clear: left; }
+
+.grid__row--tiled-4-col .grid__col:last-child:nth-child(odd) {
+  padding-right: 10px !important; }
+  @media only screen and (max-width: 749px) {
+    .grid__row--tiled-4-col .grid__col:last-child:nth-child(odd) {
+      padding-right: 0 !important; } }
+
+/**
+*
+* .grid__col
+* ----------
+* The .grid__col is the most important class for the Frontly grid system 
+* (suprise!). You may notice that the .grid__col class utilises the Sass
+* @for control directive. This enables the grid system to be customised by the
+* number of columns that are required and dictated with the $grid-column-count
+* variable in the _tools.grid.scss file. This is set as 12 by default and I
+* would recommend that you don't go higher than 16 if you really need to alter
+* it.
+* 
+* The .grid__col class also utilises the grid_col @mixin which is also 
+* declared in the _tools.grid.scss file.
+*
+*/
+.grid__col {
+  display: block;
+  float: left;
+  padding: 10px; }
+
+.grid__col--1-12 {
+  width: 8.33333%; }
+
+.grid__col--2-12 {
+  width: 16.66667%; }
+
+.grid__col--3-12 {
+  width: 25%; }
+
+.grid__col--4-12 {
+  width: 33.33333%; }
+
+.grid__col--5-12 {
+  width: 41.66667%; }
+
+.grid__col--6-12 {
+  width: 50%; }
+
+.grid__col--7-12 {
+  width: 58.33333%; }
+
+.grid__col--8-12 {
+  width: 66.66667%; }
+
+.grid__col--9-12 {
+  width: 75%; }
+
+.grid__col--10-12 {
+  width: 83.33333%; }
+
+.grid__col--11-12 {
+  width: 91.66667%; }
+
+.grid__col--12-12 {
+  width: 100%; }
+
+/**
+*
+* .grid__col--(medium-screen)
+* ---------------------------
+*
+*/
+@media only screen and (max-width: 959px) {
+  .grid__col--md-1-12 {
+    width: 8.33333%; }
+  .grid__col--md-2-12 {
+    width: 16.66667%; }
+  .grid__col--md-3-12 {
+    width: 25%; }
+  .grid__col--md-4-12 {
+    width: 33.33333%; }
+  .grid__col--md-5-12 {
+    width: 41.66667%; }
+  .grid__col--md-6-12 {
+    width: 50%; }
+  .grid__col--md-7-12 {
+    width: 58.33333%; }
+  .grid__col--md-8-12 {
+    width: 66.66667%; }
+  .grid__col--md-9-12 {
+    width: 75%; }
+  .grid__col--md-10-12 {
+    width: 83.33333%; }
+  .grid__col--md-11-12 {
+    width: 91.66667%; }
+  .grid__col--md-12-12 {
+    width: 100%; } }
+
+/**
+*
+* .grid__col--(small-screen)
+* ---------------------------
+*
+*/
+@media only screen and (max-width: 749px) {
+  .grid__col--sm-1-12 {
+    width: 8.33333%; }
+  .grid__col--sm-2-12 {
+    width: 16.66667%; }
+  .grid__col--sm-3-12 {
+    width: 25%; }
+  .grid__col--sm-4-12 {
+    width: 33.33333%; }
+  .grid__col--sm-5-12 {
+    width: 41.66667%; }
+  .grid__col--sm-6-12 {
+    width: 50%; }
+  .grid__col--sm-7-12 {
+    width: 58.33333%; }
+  .grid__col--sm-8-12 {
+    width: 66.66667%; }
+  .grid__col--sm-9-12 {
+    width: 75%; }
+  .grid__col--sm-10-12 {
+    width: 83.33333%; }
+  .grid__col--sm-11-12 {
+    width: 91.66667%; }
+  .grid__col--sm-12-12 {
+    width: 100%; } }
+
+/**
+*
+* .grid__col--(x-small-screen)
+* ---------------------------
+*
+*/
+@media only screen and (max-width: 400px) {
+  .grid__col--xsm-1-12 {
+    width: 8.33333%; }
+  .grid__col--xsm-2-12 {
+    width: 16.66667%; }
+  .grid__col--xsm-3-12 {
+    width: 25%; }
+  .grid__col--xsm-4-12 {
+    width: 33.33333%; }
+  .grid__col--xsm-5-12 {
+    width: 41.66667%; }
+  .grid__col--xsm-6-12 {
+    width: 50%; }
+  .grid__col--xsm-7-12 {
+    width: 58.33333%; }
+  .grid__col--xsm-8-12 {
+    width: 66.66667%; }
+  .grid__col--xsm-9-12 {
+    width: 75%; }
+  .grid__col--xsm-10-12 {
+    width: 83.33333%; }
+  .grid__col--xsm-11-12 {
+    width: 91.66667%; }
+  .grid__col--xsm-12-12 {
+    width: 100%; } }
+
+/**
+*
+* .grid__push
+* -----------
+* Sometimes you may wish to push elements around a little. This is easier 
+* achieved using the classes below. The .grid__push is similar to the way it
+*  works as the .grid__col class but rather than having the width dictated you 
+* have the margin-left dictated. The class is also set up by utilising the 
+* Sass @for control directive and the $gird-column-count variable. The 
+* grid_push @mixin that helps with this class can also be found in the 
+* _tools.grid.scss file.
+*
+* [!] Usage Example
+* -----------------
+* <div class="grid">
+*     <div class="grid__row">
+*         <div class="grid__col grid__col--6-12 grid__push--3-12">
+*             <h3>.grid__col--6-12 pushed by 3-12</h3>
+*         </div>
+*         <div class="grid__col grid__col--3-12">
+*             <h3>.grid__col--3-12</h3>
+*         </div>
+*     </div>
+* </div>
+*
+*/
+.grid__push--1-12 {
+  margin-left: 8.33333%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--1-12 {
+      margin-left: 0; } }
+
+.grid__push--2-12 {
+  margin-left: 16.66667%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--2-12 {
+      margin-left: 0; } }
+
+.grid__push--3-12 {
+  margin-left: 25%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--3-12 {
+      margin-left: 0; } }
+
+.grid__push--4-12 {
+  margin-left: 33.33333%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--4-12 {
+      margin-left: 0; } }
+
+.grid__push--5-12 {
+  margin-left: 41.66667%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--5-12 {
+      margin-left: 0; } }
+
+.grid__push--6-12 {
+  margin-left: 50%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--6-12 {
+      margin-left: 0; } }
+
+.grid__push--7-12 {
+  margin-left: 58.33333%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--7-12 {
+      margin-left: 0; } }
+
+.grid__push--8-12 {
+  margin-left: 66.66667%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--8-12 {
+      margin-left: 0; } }
+
+.grid__push--9-12 {
+  margin-left: 75%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--9-12 {
+      margin-left: 0; } }
+
+.grid__push--10-12 {
+  margin-left: 83.33333%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--10-12 {
+      margin-left: 0; } }
+
+.grid__push--11-12 {
+  margin-left: 91.66667%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--11-12 {
+      margin-left: 0; } }
+
+.grid__push--12-12 {
+  margin-left: 100%; }
+  @media only screen and (max-width: 749px) {
+    .grid__push--12-12 {
+      margin-left: 0; } }
+
+.grid-box {
+  padding: 20px;
+  padding: 1.25rem;
+  background: #f6f6f6;
+  text-align: center;
+  width: 100%;
+  float: left; }
+
+/**
+*
+* .no-gutters
+* -----------
+* This grid system has some default gutters. This is a common practise but 
+* some designers and front-end developers prefer to use a grid that doesn't
+* have these gutters. To cater for this preference you can use the class below 
+* by adding it to the .grid__row element. This will remove any gutters that 
+* are used on the .grid__col elements that are decendants of that .grid__row 
+* element.
+*
+* [!] Usage Example
+* -----------------
+* <div class="grid">
+*     <div class="grid__row .no-gutters">
+*         <div class="grid__col grid__col--6-12">
+*             <h3>no-gutters on .grid__col</h3>
+*         </div>
+*         <div class="grid__col grid__col--6-12">
+*             <h3>no-gutters on .grid__col</h3>
+*         </div>
+*     </div>
+* </div>
+*
+*/
+.grid__row--no-gutters .grid__col {
+  padding: 0; }
+
+/**
+*
+* Tablet Styling
+* --------------
+* The frontly grid has some presets for tablets. Below are a number of classes
+* that will enable you to alter the struture of the grid based on the viewport 
+* being at the tablet breakpoint.
+*
+*/
+@media only screen and (max-width: 959px) {
+  /**
+    *
+    * .full-width-tablet
+    *
+    * You may wish to alter the width of a .grid__col that you have set in 
+    * your grid when it reaches the tablet viewport breakpoint and that's a 
+    * common requirement. The class below caters for this requirement as shown
+    * in the usage example where the .grid__col is set to half width on 
+    * desktop but full width on tablet.
+    *
+    * [!] Usage Example
+    * -----------------
+    * <div class="grid">
+    *     <div class="grid__row .no-gutters">
+    *         <div class="grid__col grid__col--6-12 full-width-tablet">
+    *             <h3>This will be full width on tablet devices</h3>
+    *         </div>
+    *         <div class="grid__col grid__col--6-12 full-width-tablet">
+    *             <h3>This will be full width on tablet devices</h3>
+    *         </div>
+    *     </div>
+    * </div>
+    *
+    */
+  .full-width-tablet {
+    width: 100%; }
+    .full-width-tablet:first-child {
+      padding-right: 0; }
+    .full-width-tablet:last-child {
+      padding-left: 0; }
+  /**
+    *
+    * .half-width-tablet
+    *
+    * You may wish to alter the width of a .grid__col that you have set in 
+    * your grid when it reaches the tablet viewport breakpoint and that's a 
+    * common requirement. The class below caters for this requirement as shown
+    * in the usage example where the .grid__col is set to a third of the  
+    * width on desktop but half width on tablet.
+    *
+    * [!] Usage Example
+    * -----------------
+    * <div class="grid">
+    *     <div class="grid__row .no-gutters">
+    *         <div class="grid__col grid__col--4-12 half-width-tablet">
+    *             <h3>This will be half width on tablet devices</h3>
+    *         </div>
+    *     </div>
+    * </div>
+    *
+    */
+  .half-width-tablet {
+    width: 50%; }
+  /**
+    *
+    * .align-center-tablet
+    *
+    * You may wish to alter text alignment to be centered on a tablet device.
+    * By using the class below this can be achieved.
+    *
+    * [!] Usage Example
+    * -----------------
+    * <div class="grid">
+    *     <div class="grid__row .no-gutters">
+    *         <div class="grid__col grid__col--6-12 half-width-tablet">
+    *             <h3>This text is centrally aligned on tablet devices</h3>
+    *         </div>
+    *         <div class="grid__col grid__col--6-12 half-width-tablet">
+    *             <h3>This text is centrally aligned on tablet devices</h3>
+    *         </div>
+    *     </div>
+    * </div>
+    *
+    */
+  .align-center-tablet {
+    text-align: center; } }
+
+@media only screen and (max-width: 749px) {
+  .grid__row {
+    padding-right: 20px;
+    padding-right: 1.25rem;
+    padding-left: 20px;
+    padding-left: 1.25rem; }
+  .grid__col {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0; }
+    .grid__col > .grid__row {
+      padding-right: 0;
+      padding-left: 0; }
+  .align-center-phone {
+    text-align: center !important; } }
+
+/* 
+------------
+OBJECTS.
+LISTS
+------------ 
+*/
+/*
+Remove all styling from lists by adding the .no-points class below
+*/
+.list--unstyled, .list--inline, .list--pills, .list--stacked {
+  list-style-type: none;
+  padding-left: 0; }
+
+/*
+There are various list styles and the classes are below to enable you to utilise them.
+*/
+.list--numbered {
+  list-style-type: decimal; }
+
+.list--circled {
+  list-style-type: circle; }
+
+.list--squared {
+  list-style-type: square; }
+
+.list--lower-abc {
+  list-style-type: lower-latin; }
+
+.list--upper-abc {
+  list-style-type: upper-latin; }
+
+/*
+A list doesn't always appear vetically so there are a couple of hortizontal list styles 
+below that can be added by assiging a class.
+*/
+.list--inline, .list--pills {
+  float: left;
+  width: 100%; }
+  .list--inline li, .list--pills li {
+    display: inline-block; }
+
+.list--pills {
+  margin-bottom: 0; }
+  .list--pills li a {
+    margin-right: 5px;
+    margin-right: 0.3125rem;
+    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    padding: 10px;
+    padding: 0.625rem;
+    background: #eee;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none; }
+
+.list--stacked li {
+  display: block; }
+  .list--stacked li a {
+    display: block;
+    text-decoration: none; }
+.list--stacked .seperator {
+  margin-top: 5px;
+  margin-top: 0.3125rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+  border-bottom: 1px solid #e5e5e5; }
+.list--stacked .title {
+  padding-top: 5px;
+  padding-top: 0.3125rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15;
+  font-weight: 700; }
+
+/* 
+------------
+OBJECTS.
+TABLES
+------------ 
+*/
+th, td {
+  padding: 10px;
+  border: 1px solid #e5e5e5; }
+
+caption {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+
+/* 
+------------
+COMPONENTS.
+------------ 
+The components files are the UI styling files. You can create UI blocks with more specificty within this collect of files e.g. you may wish to create a new set of buttons for your project. You can either do this by adding a new class within the buttons.scss file or by creating a new file that is for a specific UI component on your website.
+------------
+*/
+/* 
+------------
+COMPONENTS.
+BADGES
+------------ 
+*/
+.badge {
+  padding: 5px;
+  padding: 0.3125rem;
+  font-size: 70%;
+  margin-right: 0;
+  font-weight: bold; }
+
+.badge--smooth {
+  border-radius: 5px; }
+
+.badge--rounded {
+  border-radius: 50px; }
+
+.badge--success {
+  background: #68d68d;
+  color: #fff;
+  border: none; }
+
+.badge--error {
+  background: #ff5666;
+  color: #fff;
+  border: none; }
+
+.badge--attention {
+  background: #ff6F59;
+  color: #fff;
+  border: none; }
+
+.badge--neutral {
+  background: #5DA9E9;
+  color: #fff;
+  border: none; }
+
+/* 
+------------
+COMPONENTS.
+BUTTONS
+------------ 
+*/
+/**
+*
+* The Button (.btn) Class
+* -----------------------
+*
+* All buttons must include the .btn class as this ensures that the basic 
+* styling is applied.
+*
+*
+*/
+.btn {
+  float: left; }
+  .btn:hover {
+    background: #ddd; }
+  .btn:active {
+    background: #ccc;
+    color: #555555; }
+  .btn i {
+    font-size: .9rem; }
+
+/**
+*
+* Button Display Styles
+* ---------------------
+*
+* The classes below are used to change the way that the button is displayed 
+* physically e.g. the example below sets the button as disabled, preventing a 
+* user from clicking it.
+*
+* [!] Usage Example
+* -----------------
+*
+* <a class="btn btn--disabled">Button</a>
+*
+*
+*/
+.btn--small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: 5px;
+  padding: 0.3125rem; }
+
+.btn--large {
+  font-size: 24px;
+  font-size: 1.5rem;
+  padding: 20px;
+  padding: 1.25rem; }
+
+.btn--x-large {
+  font-size: 36px;
+  font-size: 2.25rem;
+  padding: 40px;
+  padding: 2.5rem; }
+
+.btn--block {
+  width: 100%; }
+
+.btn--rounded {
+  border-radius: 50px; }
+
+.btn--bordered, .btn-group--bordered .btn {
+  background: none;
+  border: 3px solid #ddd; }
+
+.btn--disabled {
+  color: #ddd;
+  background: #f6f6f6; }
+  .btn--disabled:hover {
+    cursor: not-allowed;
+    background: #f6f6f6;
+    color: #ddd; }
+
+/**
+*
+* Button Groups
+* -------------
+*
+* Button groups are a great way to provide a user with a selection of buttons 
+* while keeping them within a cluster. This is particularly handy for 
+* pagination.
+*
+* [!] Usage Example
+* -----------------
+*
+* <div class="btn-group">
+* 	<a class="btn">Button</a>
+* 	<a class="btn">Button</a>
+* 	<a class="btn">Button</a>
+* 	<a class="btn">Button</a>
+* </div>
+*
+*
+*/
+.btn-group {
+  float: left;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  margin-right: 10px;
+  margin-right: 0.625rem; }
+
+/**
+*
+* Button Group Styles
+* -------------------
+*
+* The button group styles follow on the from the button styles. This enables
+* you to assign the same styling achieved on the button styling without having
+* to assign the class to each individual .btn within the group. The example
+* below would provide you with the smooth corners on the .btn-group apposed to 
+* each individual .btn element.
+*
+* [!] Usage Example
+* -----------------
+*
+* <div class="btn-group btn-group--smooth">
+* 	<a class="btn">Button</a>
+* 	<a class="btn">Button</a>
+* 	<a class="btn">Button</a>
+* 	<a class="btn">Button</a>
+* </div>
+*
+*
+*/
+.btn-group .btn {
+  margin: 0; }
+  .btn-group .btn:not(:first-child) {
+    border-left: 0; }
+
+.btn-group--smooth .btn:first-child {
+  border-radius: 5px 0px 0px 5px; }
+.btn-group--smooth .btn:last-child {
+  border-radius: 0px 5px 5px 0px; }
+
+.btn-group--rounded .btn:first-child {
+  border-radius: 50px 0px 0px 50px; }
+.btn-group--rounded .btn:last-child {
+  border-radius: 0px 50px 50px 0px; }
+
+.btn-group--bordered .btn:hover {
+  background: #ddd; }
+
+/**
+*
+* Button Centered
+* ---------------
+* Centering a button can be quite useful and to help cater for that Frontly 
+* has the class below:
+*
+* [!] Usage Example
+* -----------------
+* <div class="btn--centered">
+*     <a class="btn">Button Centered</a>
+* </div>
+*
+* - or -
+*
+* <div class="btn--centered">
+*     <div class="btn-group">
+*         <a class="btn">Button Centered</a>
+*         <a class="btn">Button Centered</a>
+*         <a class="btn">Button Centered</a>
+*     </div>
+* </div>
+*
+*/
+.btn--centered {
+  text-align: center;
+  display: block; }
+  .btn--centered .btn-group {
+    float: none;
+    margin: 0 auto; }
+    .btn--centered .btn-group .btn {
+      float: left; }
+  .btn--centered .btn {
+    float: none;
+    margin-right: 0; }
+
+/**
+*
+* Buttons Colors
+* --------------
+*
+* The button colors are a set of deafults and can be customised were required 
+* by creating a new class e.g. .btn--custom-class{ background: purple }. 
+* The buttons utilise a number of color variables set in the 
+* _settings.colors.scss file and it is recommended that if you wish to create 
+* a custom .btn that you create a variable in that file to call where required.
+*
+* [!] Usage Example
+* -----------------
+*
+* <a class="btn btn--success">Button</a>
+*
+*
+*/
+.btn--success {
+  background: #68d68d;
+  border-color: #40cb6f;
+  color: #fff; }
+  .btn--success:hover {
+    background: #40cb6f;
+    color: #fff; }
+
+.btn--success.btn--bordered, .btn-group--bordered .btn--success.btn, .btn--bordered.btn--success, .btn-group--bordered .btn--success.btn {
+  border-color: #68d68d;
+  color: #68d68d;
+  background: none; }
+  .btn--success.btn--bordered:hover, .btn-group--bordered .btn--success.btn:hover, .btn--bordered.btn--success:hover, .btn-group--bordered .btn--success.btn:hover {
+    background: #68d68d;
+    color: #fff; }
+
+.btn--error {
+  background: #ff5666;
+  border-color: #ff2338;
+  color: #fff; }
+  .btn--error:hover {
+    background: #ff2338;
+    color: #fff; }
+
+.btn--error.btn--bordered, .btn-group--bordered .btn--error.btn, .btn--bordered.btn--error, .btn-group--bordered .btn--error.btn {
+  border-color: #ff5666;
+  color: #ff5666;
+  background: none; }
+  .btn--error.btn--bordered:hover, .btn-group--bordered .btn--error.btn:hover, .btn--bordered.btn--error:hover, .btn-group--bordered .btn--error.btn:hover {
+    background: #ff5666;
+    color: #fff; }
+
+.btn--attention {
+  background: #ff6F59;
+  border-color: #ff4326;
+  color: #fff; }
+  .btn--attention:hover {
+    background: #ff4326;
+    color: #fff; }
+
+.btn--attention.btn--bordered, .btn-group--bordered .btn--attention.btn, .btn--bordered.btn--attention, .btn-group--bordered .btn--attention.btn {
+  border-color: #ff6F59;
+  color: #ff6F59;
+  background: none; }
+  .btn--attention.btn--bordered:hover, .btn-group--bordered .btn--attention.btn:hover, .btn--bordered.btn--attention:hover, .btn-group--bordered .btn--attention.btn:hover {
+    background: #ff6F59;
+    color: #fff; }
+
+.btn--neutral {
+  background: #5DA9E9;
+  border-color: #3091e3;
+  color: #fff; }
+  .btn--neutral:hover {
+    background: #3091e3;
+    color: #fff; }
+
+.btn--neutral.btn--bordered, .btn-group--bordered .btn--neutral.btn, .btn--bordered.btn--neutral, .btn-group--bordered .btn--neutral.btn {
+  border-color: #5DA9E9;
+  color: #5DA9E9;
+  background: none; }
+  .btn--neutral.btn--bordered:hover, .btn-group--bordered .btn--neutral.btn:hover, .btn--bordered.btn--neutral:hover, .btn-group--bordered .btn--neutral.btn:hover {
+    background: #5DA9E9;
+    color: #fff; }
+
+.facebook {
+  color: #3b5998; }
+  .facebook--background {
+    color: #fff;
+    background: #3b5998; }
+
+.twitter {
+  color: #55acee; }
+  .twitter--background {
+    color: #fff;
+    background: #55acee; }
+
+/* 
+------------
+COMPONENTS.
+COLORS
+------------ 
+*/
+.colors {
+  padding-top: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 50px;
+  padding-bottom: 3.125rem; }
+
+.colors__list {
+  border-top: 1px solid #e5e5e5;
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+  padding-top: 1.25rem; }
+
+.color {
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding-top: 30px;
+  padding-top: 1.875rem;
+  padding-bottom: 30px;
+  padding-bottom: 1.875rem; }
+  @media only screen and (max-width: 959px) {
+    .color {
+      width: 25%; } }
+  @media only screen and (max-width: 749px) {
+    .color {
+      width: 50%; } }
+
+.color__indicator {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 100px;
+  width: 6.25rem;
+  height: 100px;
+  height: 6.25rem; }
+
+.grue {
+  color: #5D6F7C; }
+  .grue--background {
+    background: #5D6F7C; }
+
+.droplet {
+  color: #75B4DF; }
+  .droplet--background {
+    background: #75B4DF; }
+
+.bubblegum-blue {
+  color: #31C3D9; }
+  .bubblegum-blue--background {
+    background: #31C3D9; }
+
+.vibrant-blue {
+  color: #1FA0F4; }
+  .vibrant-blue--background {
+    background: #1FA0F4; }
+
+.executive {
+  color: #1A6AAF; }
+  .executive--background {
+    background: #1A6AAF; }
+
+.summer-sky {
+  color: #4FADF4; }
+  .summer-sky--background {
+    background: #4FADF4; }
+
+.baby-blue {
+  color: #91DAFF; }
+  .baby-blue--background {
+    background: #91DAFF; }
+
+.fresh-grass {
+  color: #5DBE7C; }
+  .fresh-grass--background {
+    background: #5DBE7C; }
+
+.teal {
+  color: #65D2C3; }
+  .teal--background {
+    background: #65D2C3; }
+
+.pine {
+  color: #467868; }
+  .pine--background {
+    background: #467868; }
+
+.greentea {
+  color: #036F73; }
+  .greentea--background {
+    background: #036F73; }
+
+.mint-chip {
+  color: #86E894; }
+  .mint-chip--background {
+    background: #86E894; }
+
+.slime {
+  color: #90C944; }
+  .slime--background {
+    background: #90C944; }
+
+.dark-mint {
+  color: #3294A4; }
+  .dark-mint--background {
+    background: #3294A4; }
+
+.musky-green {
+  color: #D7D596; }
+  .musky-green--background {
+    background: #D7D596; }
+
+.mid-mint {
+  color: #4ACFAF; }
+  .mid-mint--background {
+    background: #4ACFAF; }
+
+.dark-forrest {
+  color: #003D37; }
+  .dark-forrest--background {
+    background: #003D37; }
+
+.chalkboard {
+  color: #36363d; }
+  .chalkboard--background {
+    background: #36363d; }
+
+.musk {
+  color: #D7D1C7; }
+  .musk--background {
+    background: #D7D1C7; }
+
+.peach {
+  color: #F68D5D; }
+  .peach--background {
+    background: #F68D5D; }
+
+.ripe-orange {
+  color: #F49F11; }
+  .ripe-orange--background {
+    background: #F49F11; }
+
+.rust {
+  color: #D25F43; }
+  .rust--background {
+    background: #D25F43; }
+
+.faded-orange {
+  color: #F5B08A; }
+  .faded-orange--background {
+    background: #F5B08A; }
+
+.light-orange {
+  color: #FDBF62; }
+  .light-orange--background {
+    background: #FDBF62; }
+
+.fusion-pink {
+  color: #D91B5C; }
+  .fusion-pink--background {
+    background: #D91B5C; }
+
+.pink-pearl {
+  color: #FF5D7C; }
+  .pink-pearl--background {
+    background: #FF5D7C; }
+
+.petal-pink {
+  color: #FF6A77; }
+  .petal-pink--background {
+    background: #FF6A77; }
+
+.cherry-dust {
+  color: #AD3A48; }
+  .cherry-dust--background {
+    background: #AD3A48; }
+
+.shock-pink {
+  color: #FF1567; }
+  .shock-pink--background {
+    background: #FF1567; }
+
+.dusty-purple {
+  color: #827583; }
+  .dusty-purple--background {
+    background: #827583; }
+
+.smooth-purple {
+  color: #7765D9; }
+  .smooth-purple--background {
+    background: #7765D9; }
+
+.gurple {
+  color: #C1BCC6; }
+  .gurple--background {
+    background: #C1BCC6; }
+
+.sweet-purple {
+  color: #C46AC7; }
+  .sweet-purple--background {
+    background: #C46AC7; }
+
+.royal-purple {
+  color: #54152B; }
+  .royal-purple--background {
+    background: #54152B; }
+
+.maroon {
+  color: #6A1226; }
+  .maroon--background {
+    background: #6A1226; }
+
+.blood {
+  color: #70292B; }
+  .blood--background {
+    background: #70292B; }
+
+.danger {
+  color: #B00C2B; }
+  .danger--background {
+    background: #B00C2B; }
+
+.vibrant-red {
+  color: #FF3C2E; }
+  .vibrant-red--background {
+    background: #FF3C2E; }
+
+.flat-red {
+  color: #EF3E50; }
+  .flat-red--background {
+    background: #EF3E50; }
+
+.custard {
+  color: #FFC87C; }
+  .custard--background {
+    background: #FFC87C; }
+
+.dark-gold {
+  color: #947D4E; }
+  .dark-gold--background {
+    background: #947D4E; }
+
+.creamy-yellow {
+  color: #FEF2D8; }
+  .creamy-yellow--background {
+    background: #FEF2D8; }
+
+.double-yellow {
+  color: #FEEF41; }
+  .double-yellow--background {
+    background: #FEEF41; }
+
+.gold {
+  color: #EBD35B; }
+  .gold--background {
+    background: #EBD35B; }
+
+.sand {
+  color: #F6C79E; }
+  .sand--background {
+    background: #F6C79E; }
+
+.shock-yellow {
+  color: #FEFF1A; }
+  .shock-yellow--background {
+    background: #FEFF1A; }
+
+/* 
+------------
+COMPONENTS.
+DROPDOWNS
+------------ 
+*/
+.frontly-dropdown > a {
+  padding: 5px 20px 0 5px; }
+.frontly-dropdown:hover > a {
+  background: #ddd; }
+.frontly-dropdown ul {
+  width: 200px;
+  border: 1px solid #e5e5e5; }
+  .frontly-dropdown ul li a {
+    padding: 10px;
+    width: 100%;
+    position: relative; }
+.frontly-dropdown:after {
+  position: absolute;
+  right: 5px;
+  top: 35%;
+  font-size: 10px;
+  font-size: 0.625rem;
+  width: 10px;
+  color: #bbbbbb;
+  content: "\25bc"; }
+.frontly-dropdown li:hover > a {
+  background: #ddd; }
+
+/* 
+------------
+COMPONENTS.
+FRONTLY FORM
+------------ 
+*/
+.frontly-form {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  float: left;
+  width: 100%; }
+
+.frontly-form label, .frontly-form legend {
+  float: left;
+  width: 100%; }
+  .frontly-form label small, .frontly-form legend small {
+    margin-left: 5px;
+    margin-left: 0.3125rem;
+    font-weight: 400;
+    float: right; }
+
+.frontly-form input:not([type="submit"]), .frontly-form textarea, .frontly-form select {
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  padding: 10px;
+  padding: 0.625rem;
+  -moz-transition: all ease .25s;
+  -o-transition: all ease .25s;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  background: #fff;
+  float: left;
+  position: relative; }
+  .frontly-form input:not([type="submit"]):hover, .frontly-form textarea:hover, .frontly-form select:hover {
+    border-color: #a2a2a2; }
+  .frontly-form input:not([type="submit"]):focus, .frontly-form textarea:focus, .frontly-form select:focus {
+    outline: none;
+    border-color: #222; }
+
+.frontly-form select {
+  width: 100%; }
+
+.frontly-form--padded {
+  background: #f6f6f6;
+  padding: 20px;
+  padding: 1.25rem; }
+
+.frontly-form .grid__col {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.frontly-form__group {
+  display: block;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem; }
+
+.frontly-form__group--underlined {
+  border-bottom: 1px solid #e5e5e5; }
+
+/**
+* Frontly Form - Checkboxes & Radio Buttons
+* -----------------------------------------
+*
+* The Frontly form comes with some custom checkbox & radio button styling.
+* These styles utilise the :check psuedo element and as Frontly is intended to 
+* support IE8 the styling is dependant on the use of the Selectivizr script 
+* which is included in the Frontly HTML template so make sure that this is 
+* included if you aren't using the Frontly HTML template file.
+*
+*
+* [!] Usage Example
+* -----------------
+* <div class="grid">
+* <fieldset class="frontly-form__checkbox">
+*     <legend>Example Checkbox</legend>
+*     <input type="checkbox" id="check1-1" checked="checked">
+*     <label for="check1-1">Checkboxes</label>
+* </fieldset>
+*
+*/
+.frontly-form__checkbox input[type="checkbox"], .frontly-form__radio input[type="radio"] {
+  position: absolute;
+  left: -200%; }
+
+/**
+* Checkboxes
+* ----------
+*/
+.frontly-form__checkbox input[type="checkbox"] + label {
+  margin-right: 10px;
+  margin-right: 0.625rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  width: auto;
+  position: relative; }
+  .frontly-form__checkbox input[type="checkbox"] + label:before {
+    font-family: 'fontawesome';
+    content: '\f096';
+    position: absolute;
+    left: 0;
+    top: 0;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    color: #a2a2a2; }
+  .frontly-form__checkbox input[type="checkbox"] + label:hover {
+    border-color: #a2a2a2; }
+    .frontly-form__checkbox input[type="checkbox"] + label:hover:before {
+      color: #a2a2a2; }
+
+.frontly-form__checkbox input[type="checkbox"]:checked + label:before {
+  content: '\f046';
+  color: #222; }
+
+.frontly-form__checkbox--btn input[type="checkbox"] + label {
+  padding-left: 35px;
+  padding-left: 2.1875rem;
+  background: #fff; }
+  .frontly-form__checkbox--btn input[type="checkbox"] + label:before {
+    font-family: 'fontawesome';
+    content: '\f096';
+    position: absolute;
+    left: 10px;
+    top: 10px; }
+
+.frontly-form__checkbox--btn input[type="checkbox"]:checked + label {
+  border-color: #222; }
+
+.frontly-form__checkbox--btn input[type="checkbox"]:checked + label:before {
+  color: #222; }
+
+/**
+* Radio Buttons
+* -------------
+*/
+.frontly-form__radio input[type="radio"] + label {
+  margin-right: 10px;
+  margin-right: 0.625rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  width: auto;
+  position: relative;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s; }
+  .frontly-form__radio input[type="radio"] + label:before {
+    font-family: 'fontawesome';
+    content: '\f10c';
+    width: 15px;
+    width: 0.9375rem;
+    height: 15px;
+    height: 0.9375rem;
+    position: absolute;
+    border-radius: 5px;
+    left: 0;
+    top: 0;
+    color: #a2a2a2; }
+
+.frontly-form__radio input[type="radio"]:checked + label:before {
+  content: '\f192';
+  color: #222; }
+
+.frontly-form__radio--btn input[type="radio"] + label {
+  padding-left: 35px;
+  padding-left: 2.1875rem;
+  background: #fff; }
+  .frontly-form__radio--btn input[type="radio"] + label:before {
+    font-family: 'fontawesome';
+    content: '\f10c';
+    width: 15px;
+    width: 0.9375rem;
+    height: 15px;
+    height: 0.9375rem;
+    position: absolute;
+    left: 10px;
+    top: 10px; }
+  .frontly-form__radio--btn input[type="radio"] + label:hover {
+    border-color: #a2a2a2; }
+
+.frontly-form__radio--btn input[type="radio"]:checked + label {
+  border-color: #222; }
+
+.frontly-form__radio--btn input[type="radio"]:checked + label:before {
+  color: #222; }
+
+/**
+*
+* Frontly Form - Search
+*
+* [!] Usage Example
+* -----------------
+* <form>
+*     <span class="frontly-form__search">
+*         <input type="search">
+*         <button>Search</button>
+*     </span>
+* </form>
+*
+*
+*/
+.frontly-form.frontly-form--inline {
+  float: left; }
+  .frontly-form.frontly-form--inline .frontly-form__append, .frontly-form.frontly-form--inline .frontly-form__prepend {
+    width: auto;
+    margin-right: 5px; }
+  .frontly-form.frontly-form--inline button, .frontly-form.frontly-form--inline .btn {
+    margin: 0;
+    float: left;
+    width: 15%;
+    border-left: 0; }
+
+/**
+*
+* Frontly Form - Prepending and Appending inputs
+*
+* Some input fields have a specific input type. You can specify the data that
+* you wish the user to input using the label tag but you can accompany this 
+* with an input prepend or append. Below there are a number of classes that
+* enable you to assign a prepend or append icon to the input fields to help
+* users identify what is required.
+*
+* [!] Usage Example
+* -----------------
+* <form>
+*     <label>Username</label>
+*     <span class="frontly-form__append frontly-form__append--user">
+*         <input type="text">
+*     </span>
+* </form>
+*
+*
+*/
+.frontly-form .frontly-form__prepend {
+  position: relative;
+  float: left;
+  width: 100%; }
+  .frontly-form .frontly-form__prepend:after {
+    font-family: "fontawesome";
+    color: #ddd;
+    position: absolute;
+    top: 12px;
+    left: 10px; }
+  .frontly-form .frontly-form__prepend input {
+    padding-left: 30px;
+    padding-left: 1.875rem; }
+
+.frontly-form .frontly-form__append {
+  position: relative;
+  float: left;
+  width: 100%; }
+  .frontly-form .frontly-form__append:after {
+    font-family: "fontawesome";
+    color: #ddd;
+    position: absolute;
+    top: 12px;
+    right: 10px; }
+  .frontly-form .frontly-form__append input {
+    padding-right: 30px;
+    padding-right: 1.875rem; }
+
+.frontly-form__append--address:after, .frontly-form__prepend--address:after {
+  content: '\f041'; }
+
+.frontly-form__append--dollars:after, .frontly-form__prepend--dollars:after {
+  content: '\f155'; }
+
+.frontly-form__append--email:after, .frontly-form__prepend--email:after {
+  content: '\f0e0'; }
+
+.frontly-form__append--euros:after, .frontly-form__prepend--euros:after {
+  content: '\f153'; }
+
+.frontly-form__append--file:after, .frontly-form__prepend--file:after {
+  content: '\f114'; }
+
+.frontly-form__append--password:after, .frontly-form__prepend--password:after {
+  content: '\f023'; }
+
+.frontly-form__append--phone:after, .frontly-form__prepend--phone:after {
+  content: '\f095'; }
+
+.frontly-form__append--pounds:after, .frontly-form__prepend--pounds:after {
+  content: '\f154'; }
+
+.frontly-form__append--search:after, .frontly-form__prepend--search:after {
+  content: '\f002'; }
+
+.frontly-form__append--user:after, .frontly-form__prepend--user:after {
+  content: '\f007'; }
+
+/* 
+------------
+COMPONENTS.
+FRONTLY NAV
+------------ 
+*/
+/** 
+* .frontly-nav 
+* ------------ 
+* This is the default navigation block of the frontly framework.
+* The colors that are set for the default browser are set in the 
+* settings.colors.scss file and assigned to $nav-clr.
+* 
+*/
+.frontly-nav {
+  float: left;
+  width: 100%; }
+  .frontly-nav ul {
+    margin: 0;
+    padding: 0;
+    float: left; }
+    @media only screen and (max-width: 749px) {
+      .frontly-nav ul {
+        width: 100%;
+        display: none; } }
+  .frontly-nav ul li {
+    display: block;
+    float: left; }
+    @media only screen and (max-width: 749px) {
+      .frontly-nav ul li {
+        width: 100%;
+        border-top: 1px solid #e5e5e5; } }
+  .frontly-nav ul li a, .frontly-nav a {
+    padding: 10px;
+    padding: 0.625rem;
+    color: #222;
+    display: block;
+    float: left;
+    text-decoration: none;
+    -moz-transition: all ease 0.25s;
+    -o-transition: all ease 0.25s;
+    -webkit-transition: all ease 0.25s;
+    transition: all ease 0.25s; }
+    @media only screen and (max-width: 749px) {
+      .frontly-nav ul li a, .frontly-nav a {
+        width: 100%; }
+        .frontly-nav ul li a.frontly-nav__menu-link, .frontly-nav a.frontly-nav__menu-link {
+          width: auto; } }
+    .frontly-nav ul li a:hover, .frontly-nav a:hover {
+      background: #e5e5e5; }
+  .frontly-nav .frontly-dropdown:hover > a {
+    background: #e5e5e5; }
+  .frontly-nav .frontly-dropdown a {
+    padding-right: 20px; }
+  @media only screen and (max-width: 749px) {
+    .frontly-nav .frontly-dropdown:after {
+      display: none; } }
+  .frontly-nav .frontly-dropdown ul {
+    -moz-transition: all ease 0.25s;
+    -o-transition: all ease 0.25s;
+    -webkit-transition: all ease 0.25s;
+    transition: all ease 0.25s;
+    top: 36px;
+    border: none;
+    background: #f6f6f6; }
+    @media only screen and (max-width: 749px) {
+      .frontly-nav .frontly-dropdown ul {
+        display: none; } }
+    .frontly-nav .frontly-dropdown ul li:hover > a {
+      background: #e5e5e5; }
+  .frontly-nav .frontly-dropdown a {
+    padding-right: 20px;
+    padding-right: 1.25rem; }
+  .frontly-nav .frontly-dropdown:after {
+    right: 5px;
+    top: 35%;
+    color: #888888; }
+
+/** 
+* .frontly-nav--branded 
+* --------------------- 
+* The branded frontly nav is a great way to incorporate your brands colors into
+* the naviagtions style. It utilises the $brand-clr variable that is set in the
+* setting.colors.scss file.
+*
+*/
+.frontly-nav--big ul li a, .frontly-nav--big a {
+  padding: 20px;
+  padding: 1.25rem; }
+.frontly-nav--big .frontly-nav__text {
+  padding-top: 20px;
+  padding-top: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem; }
+.frontly-nav--big .frontly-dropdown:after {
+  right: 20px;
+  top: 40%; }
+.frontly-nav--big .frontly-dropdown a {
+  padding-right: 40px; }
+.frontly-nav--big .frontly-dropdown ul {
+  top: 56px;
+  top: 3.5rem; }
+
+/** 
+* .frontly-nav--bordered
+* ---------------------- 
+* Should you wish to use a right aligned list in your navigation, this helper 
+* class enables you to do that. By assigning it to the <ul> tag you are able 
+* to pull it to the right of the frontly nav.
+* 
+*/
+.frontly-nav--bordered {
+  border: 3px solid #e5e5e5; }
+
+.frontly-nav--thin-bordered {
+  border: 1px solid #e5e5e5; }
+
+.frontly-nav.frontly-nav--bordered .frontly-nav__text, .frontly-nav.frontly-nav--thin-bordered .frontly-nav__text {
+  margin-left: 10px;
+  margin-left: 0.625rem; }
+
+.frontly-nav--big.frontly-nav--bordered .frontly-nav__text, .frontly-nav--big.frontly-nav--thin-bordered .frontly-nav__text {
+  margin-left: 20px;
+  margin-left: 1.25rem; }
+
+/** 
+* .frontly-nav--underlined
+* ------------------------ 
+* Should you wish to use a right aligned list in your navigation, this helper 
+* class enables you to do that. By assigning it to the <ul> tag you are able 
+* to pull it to the right of the frontly nav.
+* 
+*/
+.frontly-nav--underlined {
+  border-bottom: 3px solid #e5e5e5; }
+
+.frontly-nav--thin-underlined {
+  border-bottom: 1px solid #e5e5e5; }
+
+/** 
+* .frontly-nav--right
+* ------------------- 
+* Should you wish to use a right aligned list in your navigation, this helper 
+* class enables you to do that. By assigning it to the <ul> tag you are able 
+* to pull it to the right of the frontly nav.
+* 
+*/
+ul.frontly-nav--right {
+  float: right; }
+
+.frontly-nav--right .frontly-dropdown ul {
+  left: auto;
+  right: 0; }
+  .frontly-nav--right .frontly-dropdown ul li:hover ul {
+    left: -100%; }
+
+/** 
+* .frontly-nav__text
+* ------------------
+* A navigation may sometimes require a bit of text that isn't wrapped in an <a>
+* tag. This class enables you to do just that.
+* 
+*/
+.frontly-nav__text {
+  float: left;
+  width: auto;
+  margin: 0;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-top: 0.625rem;
+  padding-right: 10px;
+  padding-right: 0.625rem;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+  line-height: 16px;
+  line-height: 1rem; }
+
+.frontly-nav__text--brand-name {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+/* 
+------------
+COMPONENTS.
+IMAGE STYLES
+------------ 
+*/
+.image--polaroid {
+  padding: 20px;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  float: left;
+  width: 100%; }
+  .image--polaroid img {
+    border: 1px solid #ddd; }
+  .image--polaroid figcaption, .image--polaroid .caption {
+    padding-top: 20px;
+    padding-top: 1.25rem;
+    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
+    border: none;
+    text-align: center; }
+
+.image--round {
+  border-radius: 100%;
+  float: left; }
+
+.image--smooth {
+  border-radius: 5px;
+  float: left; }
+
+/* 
+------------
+COMPONENTS.
+INTRODUCTION
+------------ 
+*/
+.introduction {
+  padding-top: 50px;
+  padding-top: 3.125rem;
+  padding-bottom: 50px;
+  padding-bottom: 3.125rem; }
+  .introduction p {
+    text-align: center;
+    font-size: 24px;
+    font-size: 1.5rem; }
+
+/* 
+------------
+COMPONENTS.
+MAIN HEADER
+------------ 
+*/
+.main-header {
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1;
+  background: #fff; }
+
+.logo--small {
+  max-width: 50px;
+  max-width: 3.125rem;
+  margin-right: 10px;
+  margin-right: 0.625rem;
+  margin: 0 auto; }
+
+@media only screen and (max-width: 749px) {
+  .main-header .frontly-nav__text--brand-name {
+    position: absolute;
+    left: -200%; } }
+
+/* 
+------------
+COMPONENTS.
+MAIN FOOTER
+------------ 
+*/
+.main-footer {
+  border-top: 1px solid #e5e5e5;
+  z-index: 1;
+  text-align: center;
+  padding-top: 40px;
+  padding-top: 2.5rem; }
+
+.main-footer__tagline {
+  background: #222;
+  color: #fff; }
+  .main-footer__tagline p {
+    margin-bottom: none; }
+
+/* 
+------------
+COMPONENTS.
+PANELS
+------------ 
+*/
+.panel {
+  width: 100%;
+  float: left;
+  clear: both;
+  border: 1px solid #e5e5e5;
+  background: #f6f6f6;
+  padding: 20px;
+  padding: 1.25rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+  .panel > * {
+    margin: 0; }
+
+.panel--small {
+  padding: 10px;
+  padding: 0.625rem; }
+
+.panel--large {
+  padding: 40px;
+  padding: 2.5rem; }
+
+.panel--dark {
+  background: #222;
+  border: none;
+  color: #fff; }
+
+.panel--hollow {
+  background: none; }
+
+.panel--error {
+  background: #ff5666;
+  border: none;
+  color: #fff; }
+
+.panel--attention {
+  background: #ff6F59;
+  border: none;
+  color: #fff; }
+
+.panel--success {
+  background: #68d68d;
+  border: none;
+  color: #fff; }
+
+.panel--smooth {
+  border-radius: 5px; }
+
+.panel--can-close {
+  position: relative; }
+
+.panel--can-close__btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #fff; }
+
+/* 
+------------
+COMPONENTS.
+TABLES
+------------ 
+*/
+.striped-table tbody tr:nth-child(odd) {
+  background: #f6f6f6; }
+
+.striped-table--branded tbody tr:nth-child(odd) {
+  background: #fad0d8; }
+
+.table-wrap {
+  float: left;
+  width: 100%;
+  overflow-x: scroll;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+  .table-wrap table {
+    margin-bottom: 0; }
+
+/* 
+------------
+COMPONENTS.
+TOOLTIPS
+------------ 
+*/
+.has-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #a2a2a2; }
+  .has-tooltip:hover {
+    cursor: help; }
+    .has-tooltip:hover .tooltip, .has-tooltip:hover .tooltip--bottom {
+      display: block; }
+
+.tooltip {
+  display: none;
+  position: absolute;
+  text-align: center;
+  bottom: 130%;
+  left: 0;
+  padding: 5px;
+  background: #bbb;
+  width: 100%; }
+  .tooltip:after {
+    font-size: 24px;
+    font-size: 1.5rem;
+    bottom: -13px;
+    position: absolute;
+    content: '\25be';
+    color: #bbb;
+    left: 45%;
+    line-height: 1; }
+
+.tooltip--bottom {
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 150%;
+  left: 0;
+  padding: 5px;
+  background: #bbb;
+  border-radius: 5px;
+  width: 100%; }
+  .tooltip--bottom:after {
+    font-size: 36px;
+    font-size: 2.25rem;
+    top: -23px;
+    position: absolute;
+    content: '\25b4';
+    color: #bbb;
+    left: 45%;
+    line-height: 1; }
+
+.tooltip--error {
+  background: #ff5666;
+  color: #fff; }
+  .tooltip--error:after {
+    color: #ff5666; }
+
+.tooltip--attention {
+  background: #ff6F59;
+  color: #fff; }
+  .tooltip--attention:after {
+    color: #ff6F59; }
+
+.tooltip--success {
+  background: #68d68d;
+  color: #fff; }
+  .tooltip--success:after {
+    color: #68d68d; }
+
+.tooltip--neutral {
+  background: #5DA9E9;
+  color: #fff; }
+  .tooltip--neutral:after {
+    color: #5DA9E9; }
+
+/* 
+------------
+VETOS.
+------------
+The vetos files, a.k.a the naughty files, consist of the additional overriding classes that you may need to utilise or add should you need a specific class changed based on a certain sitiation e.g. you can utilise the .float--right veto class to float a .btn element to the right within having to create a 
+.btn--right class and causing duplication of a styling method.
+------------ 
+*/
+/* 
+------------
+VETOS.
+HELPERS
+
+a.k.a
+THE 
+GUILTY FILE
+------------ 
+*/
+/**
+*
+* This is the guilty file that keeps all the little helper classes contained.
+* These classes enable you to override any pre-existing styling where required.
+*
+* They shouldn't be used where the styling can be added to an element within a 
+* css file but we all know that we don't live in an ideal world and quick 
+* protoyping can be important, so adding a little classes temporarily can be 
+* useful.
+*
+*/
+/**
+*
+* Floats
+* ----------
+* Floating elements should be set within your CSS but this can't always be 
+* possible. The classes below enable you to set the float of an element.
+* 
+*/
+.float--left {
+  float: left !important; }
+
+.float--right {
+  float: right !important; }
+
+.float--none {
+  float: none !important; }
+
+/**
+*
+* Margins & Padding
+* -----------------
+* Floating elements should be set within your CSS but this can't always be 
+* possible. The classes below enable you to set the float of an element.
+* 
+*/
+/**
+* Directions Sass List
+*/
+/**
+* Margins
+*/
+.push--top {
+  margin-top: 10px;
+  margin-top: 0.625rem; }
+
+.push--right {
+  margin-right: 10px;
+  margin-right: 0.625rem; }
+
+.push--bottom {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem; }
+
+.push--left {
+  margin-left: 10px;
+  margin-left: 0.625rem; }
+
+/**
+* Padding
+*/
+.pad--top {
+  padding-top: 10px;
+  padding-top: 0.625rem; }
+
+.pad--right {
+  padding-right: 10px;
+  padding-right: 0.625rem; }
+
+.pad--bottom {
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem; }
+
+.pad--left {
+  padding-left: 10px;
+  padding-left: 0.625rem; }
+
+/**
+*
+* Font Weights
+* ------------
+* The font weight over classes below can sometimes become quite useful, as 
+* shown in the example below:
+*
+* [!] Usage Example
+* -----------------
+* <h1>Font Weight <span class="font-weight--normal">override</span></h1>
+* 
+*/
+.font-weight--light {
+  font-weight: 100 !important; }
+
+.font-weight--normal {
+  font-weight: 400 !important; }
+
+.font-weight--heavy {
+  font-weight: 700 !important; }
+
+/**
+*
+* Text Alignment
+* --------------
+* The alignment of text set by a parent class/style sometimes needs to be
+* overridden. You can achieve that by using once of the classes below:
+*
+* [!] Usage Example
+* -----------------
+* <p class="align--right">Text aligned right</p>
+* <p class="align--center">Text aligned center</p>
+* <p class="align--left">Text aligned left</p>
+* 
+*/
+.align--left {
+  text-align: left !important; }
+
+.align--center {
+  text-align: center !important; }
+
+.align--right {
+  text-align: right !important; }
+
+/**
+*
+* Hidding Elements
+* ----------------
+* Hiding elements can be useful when working with a repsonsive design. It 
+* enables you to add and remove elements depending on the viewport easily.
+* The classes below enable you to do just that, as shown in the example below:
+*
+* [!] Usage Example
+* -----------------
+* <div class="hidden display--tablet">
+*     <p>Hey, you can only see me on a tablet device!</p>
+* </div>
+* 
+*/
+.hidden {
+  display: none !important; }
+
+/**
+* Hide or display elements on tablet devices
+*/
+@media only screen and (max-width: 959px) {
+  .display--medium {
+    display: block !important; }
+  .hidden--medium {
+    display: none !important; } }
+
+/**
+* Hide or display elements on mobile devices
+*/
+@media only screen and (max-width: 749px) {
+  .display--small {
+    display: block !important; }
+  .hidden--small {
+    display: none !important; } }
